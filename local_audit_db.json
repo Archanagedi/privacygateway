@@ -1,0 +1,52 @@
+[
+  {
+    "id": "b744a0e5-13f5-4382-8199-f9902b2174eb",
+    "request_id": "REQ-PS-F22990CB46",
+    "created_at": "2026-11-12T12:07:42.860458Z",
+    "document_type": "KYC Document",
+    "task_selected": "summarize",
+    "entity_types": [
+      "PERSON",
+      "ADDRESS",
+      "AADHAAR",
+      "PAN"
+    ],
+    "masked_entity_count": 4,
+    "sanitized_payload": "My name is <PERSON_1>. My Aadhaar number is <AADHAAR_1> and my PAN is <PAN_1>. I live at <ADDRESS_1>.",
+    "external_model": "openai/gpt-oss-120b (Local Simulation)",
+    "leakage_check_passed": true,
+    "processing_status": "SUCCESS",
+    "processing_latency_ms": 4.9,
+    "reinsertion_status": "PERFECT",
+    "storage_provider": "Local Vault",
+    "metadata": {
+      "task": "summarize",
+      "is_simulated": true
+    }
+  },
+  {
+    "id": "d5428116-4600-4cda-a8df-946442aec15f",
+    "request_id": "REQ-PS-4C108A1777",
+    "created_at": "2026-11-12T12:06:35.101879Z",
+    "document_type": "KYC Document",
+    "task_selected": "summarize",
+    "entity_types": [
+      "AADHAAR",
+      "PERSON",
+      "PAN",
+      "ADDRESS"
+    ],
+    "masked_entity_count": 4,
+    "sanitized_payload": "My name is <PERSON_1>. My Aadhaar number is <AADHAAR_1> and my PAN is <PAN_1>. I live at <ADDRESS_1>.",
+    "external_model": "openai/gpt-oss-120b (Local Simulation)",
+    "leakage_check_passed": true,
+    "processing_status": "SUCCESS",
+    "processing_latency_ms": 3.1,
+    "reinsertion_status": "PERFECT",
+    "storage_provider": "Local Vault",
+    "metadata": {
+      "task": "summarize",
+      "is_simulated": true
+    }
+  }
+]

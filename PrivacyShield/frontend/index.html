@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PrivacyShield – DPDP Privacy Gateway for Enterprise LLMs</title>
+  
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+  <!-- Top Notification Toast Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Application Shell -->
+  <div class="app-layout">
+    
+    <!-- FIXED SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo-container">
+          <div class="logo-shield">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="M9 12l2 2 4-4" stroke="#10b981" stroke-width="2.2"/>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="brand-title">PrivacyShield</span>
+            <span class="brand-subtitle">DPDP Privacy Gateway</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="sidebar-nav">
+        <button class="nav-item active" data-page="dashboard">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="9" rx="1.5"/>
+            <rect x="14" y="3" width="7" height="5" rx="1.5"/>
+            <rect x="14" y="12" width="7" height="9" rx="1.5"/>
+            <rect x="3" y="16" width="7" height="5" rx="1.5"/>
+          </svg>
+          <span class="nav-label">Dashboard</span>
+        </button>
+
+        <button class="nav-item" data-page="gateway">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="3" width="20" height="14" rx="2"/>
+            <line x1="8" y1="21" x2="16" y2="21"/>
+            <line x1="12" y1="17" x2="12" y2="21"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <span class="nav-label">Privacy Gateway</span>
+          <span class="nav-badge">Core</span>
+        </button>
+
+        <button class="nav-item" data-page="testing">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="9" y1="15" x2="15" y2="15"/>
+            <line x1="12" y1="12" x2="12" y2="18"/>
+          </svg>
+          <span class="nav-label">Document Testing</span>
+          <span class="nav-badge-alt">50 Docs</span>
+        </button>
+
+        <button class="nav-item" data-page="audit">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 20h9"/>
+            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+          </svg>
+          <span class="nav-label">Audit Logs</span>
+        </button>
+
+        <button class="nav-item" data-page="metrics">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="20" x2="18" y2="10"/>
+            <line x1="12" y1="20" x2="12" y2="4"/>
+            <line x1="6" y1="20" x2="6" y2="14"/>
+          </svg>
+          <span class="nav-label">Performance Metrics</span>
+        </button>
+
+        <button class="nav-item" data-page="settings">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+          </svg>
+          <span class="nav-label">Settings</span>
+        </button>
+      </nav>
+
+      <!-- Sidebar Footer Status -->
+      <div class="sidebar-footer">
+        <div class="system-status-indicator">
+          <span class="pulse-dot"></span>
+          <div class="status-texts">
+            <span class="status-title">Zero-Leakage Active</span>
+            <span class="status-desc" id="backend-conn-status">Connecting to engine...</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="main-content">
+      
+      <!-- TOP BAR -->
+      <header class="top-header">
+        <div class="header-breadcrumb">
+          <span class="bc-root">PrivacyShield</span>
+          <span class="bc-sep">/</span>
+          <span class="bc-current" id="current-page-title">Dashboard</span>
+        </div>
+        <div class="header-actions">
+          <div class="tag-pill dpdp-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>DPDP Act 2023 Compliant</span>
+          </div>
+          <div class="tag-pill model-tag" id="header-model-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m10 15 5-3-5-3v6z"/></svg>
+            <span id="header-active-model">openai/gpt-oss-120b</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- VIEW PAGES CONTAINER -->
+      <div class="pages-wrapper">
+
+        <!-- ================================================================= -->
+        <!-- 1. DASHBOARD PAGE -->
+        <!-- ================================================================= -->
+        <section id="page-dashboard" class="page-view active">
+          <!-- Hero Banner -->
+          <div class="hero-banner">
+            <div class="hero-content">
+              <h1 class="hero-title">DPDP-Ready Privacy Gateway for Enterprise LLMs</h1>
+              <p class="hero-subtitle">
+                Detect the Sensitive. Mask the Personal. Process Securely. Restore Locally.
+              </p>
+              <div class="hero-badges">
+                <span class="badge-item"><span class="check-icon">✓</span> Local Presidio PII Detection</span>
+                <span class="badge-item"><span class="check-icon">✓</span> Indian Identifiers (Aadhaar, PAN, GSTIN, Voter ID)</span>
+                <span class="badge-item"><span class="check-icon">✓</span> 0% Outbound PII Leakage Guarantee</span>
+                <span class="badge-item"><span class="check-icon">✓</span> Non-Reversible Supabase Audit Vault</span>
+              </div>
+            </div>
+            <div class="hero-cta">
+              <button class="btn btn-primary btn-glow" onclick="navigateToPage('gateway')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                Launch Privacy Gateway
+              </button>
+            </div>
+          </div>
+
+          <!-- Statistic Cards -->
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-header">
+                <span class="stat-label">Total Documents Processed</span>
+                <div class="stat-icon-wrap icon-blue">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                </div>
+              </div>
+              <div class="stat-value" id="stat-total-docs">0</div>
+              <div class="stat-meta">Enterprise & test documents passed</div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-header">
+                <span class="stat-label">Total PII Entities Detected</span>
+                <div class="stat-icon-wrap icon-purple">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                </div>
+              </div>
+              <div class="stat-value" id="stat-total-detected">0</div>
+              <div class="stat-meta">Aadhaar, PAN, GSTIN, Names, Addresses</div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-header">
+                <span class="stat-label">Total PII Values Masked</span>
+                <div class="stat-icon-wrap icon-cyan">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                </div>
+              </div>
+              <div class="stat-value" id="stat-total-masked">0</div>
+              <div class="stat-meta">Deterministic typed token placeholders</div>
+            </div>
+
+            <div class="stat-card stat-card-highlight">
+              <div class="stat-header">
+                <span class="stat-label">Outbound PII Leakage Count</span>
+                <div class="stat-icon-wrap icon-green">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 12 15 16 10"/></svg>
+                </div>
+              </div>
+              <div class="stat-value text-success" id="stat-leakage-count">0</div>
+              <div class="stat-meta text-success"><span class="badge-mini success">TARGET MET</span> Zero raw PII outbound</div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-header">
+                <span class="stat-label">Avg. Processing Time</span>
+                <div class="stat-icon-wrap icon-amber">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+              </div>
+              <div class="stat-value" id="stat-avg-latency">0.0 ms</div>
+              <div class="stat-meta">High throughput local regex + NER</div>
+            </div>
+          </div>
+
+          <!-- Privacy Workflow Visualization -->
+          <div class="card workflow-card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">DPDP End-to-End Privacy Pipeline Architecture</h3>
+                <p class="card-subtitle">Zero raw sensitive personal information escapes the local host perimeter</p>
+              </div>
+              <div class="security-status-badge">
+                <span class="status-indicator-dot online"></span>
+                <span>Pre-Flight Guard: <strong>Strict Abort Active</strong></span>
+              </div>
+            </div>
+
+            <div class="workflow-flow">
+              <!-- Step 1 -->
+              <div class="flow-step">
+                <div class="flow-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                </div>
+                <div class="flow-step-num">01</div>
+                <div class="flow-step-title">Document Input</div>
+                <div class="flow-step-desc">Enterprise loan, KYC, or support text containing raw Indian PII</div>
+              </div>
+
+              <div class="flow-arrow">
+                <div class="arrow-line"></div>
+                <div class="arrow-head"></div>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="flow-step">
+                <div class="flow-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><path d="M11 8v6M8 11h6"/></svg>
+                </div>
+                <div class="flow-step-num">02</div>
+                <div class="flow-step-title">Local PII Detection</div>
+                <div class="flow-step-desc">Microsoft Presidio + Verhoeff Aadhaar + PAN + GSTIN + Indian NER</div>
+              </div>
+
+              <div class="flow-arrow">
+                <div class="arrow-line"></div>
+                <div class="arrow-head"></div>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="flow-step">
+                <div class="flow-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                </div>
+                <div class="flow-step-num">03</div>
+                <div class="flow-step-title">PII Masking</div>
+                <div class="flow-step-desc">Consistent placeholders (&lt;PERSON_1&gt;, &lt;PAN_1&gt;) mapped in RAM</div>
+              </div>
+
+              <div class="flow-arrow">
+                <div class="arrow-line"></div>
+                <div class="arrow-head"></div>
+              </div>
+
+              <!-- Step 4 -->
+              <div class="flow-step">
+                <div class="flow-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+                </div>
+                <div class="flow-step-num">04</div>
+                <div class="flow-step-title">External LLM</div>
+                <div class="flow-step-desc">Groq Cloud (openai/gpt-oss-120b) receives ONLY sanitized tokens</div>
+              </div>
+
+              <div class="flow-arrow">
+                <div class="arrow-line"></div>
+                <div class="arrow-head"></div>
+              </div>
+
+              <!-- Step 5 -->
+              <div class="flow-step">
+                <div class="flow-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                </div>
+                <div class="flow-step-num">05</div>
+                <div class="flow-step-title">Local Reinsertion</div>
+                <div class="flow-step-desc">Restores original values locally from private in-memory mapping</div>
+              </div>
+
+              <div class="flow-arrow">
+                <div class="arrow-line"></div>
+                <div class="arrow-head"></div>
+              </div>
+
+              <!-- Step 6 -->
+              <div class="flow-step">
+                <div class="flow-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                </div>
+                <div class="flow-step-num">06</div>
+                <div class="flow-step-title">Final Secure Response</div>
+                <div class="flow-step-desc">Delivered to user with full audit log and safe metadata telemetry</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================= -->
+        <!-- 2. PRIVACY GATEWAY PAGE (MAIN FEATURE: 3-PANEL WORKSPACE) -->
+        <!-- ================================================================= -->
+        <section id="page-gateway" class="page-view">
+          <div class="page-title-row">
+            <div>
+              <h2 class="view-title">Privacy Gateway Workspace</h2>
+              <p class="view-subtitle">End-to-end 3-stage isolation: Original Input → Outbound Sanitized Payload → Final Restored Response</p>
+            </div>
+            <div class="workspace-quick-actions">
+              <select id="quick-sample-select" class="form-select-sm" onchange="loadSelectedSampleIntoGateway()">
+                <option value="">Load Sample Indian Document...</option>
+              </select>
+              <button class="btn btn-secondary btn-sm" onclick="clearGatewayWorkspace()">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+
+          <!-- Dynamic Info Alert if in Simulated Mode -->
+          <div id="gateway-simulated-banner" class="alert-banner info-banner" style="display: none;">
+            <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            <div class="alert-content">
+              <strong>Simulated Local Inference Engine Active:</strong>
+              <span id="gateway-banner-text">Groq Cloud API key is unset or in simulated mode. Local zero-leakage pipeline is active. You can add your Groq API key anytime in Settings.</span>
+            </div>
+          </div>
+
+          <!-- THREE PANEL WORKSPACE GRID -->
+          <div class="workspace-grid">
+            
+            <!-- PANEL A: ORIGINAL DOCUMENT -->
+            <div class="panel-card panel-input">
+              <div class="panel-header">
+                <div class="panel-title-group">
+                  <span class="panel-step-badge">Panel A</span>
+                  <h3 class="panel-title">Original Document</h3>
+                </div>
+                <div class="file-upload-wrapper">
+                  <label for="doc-file-upload" class="btn-file-upload" id="btn-file-upload-label" title="Upload PDF, Word (.doc, .docx), Excel (.xls, .xlsx), PowerPoint (.ppt, .pptx), Text, CSV, JSON, XML, or Image">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                    <span id="upload-btn-text">Upload File</span>
+                  </label>
+                  <input 
+                    type="file" 
+                    id="doc-file-upload" 
+                    accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt,.csv,.json,.xml,.jpg,.jpeg,.png,.webp,.bmp,.tiff,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation,text/plain,text/csv,application/json,text/xml,application/xml,image/jpeg,image/png,image/webp,image/bmp,image/tiff" 
+                    onchange="handleFileUpload(event)">
+                </div>
+              </div>
+
+              <!-- Selected / Uploaded File Info Banner -->
+              <div id="uploaded-file-banner" class="uploaded-file-banner" style="display: none;">
+                <div class="file-banner-left">
+                  <span class="file-banner-icon" id="file-banner-icon">📄</span>
+                  <div class="file-banner-details">
+                    <div class="file-banner-name" id="file-banner-name">document.pdf</div>
+                    <div class="file-banner-meta" id="file-banner-meta">PDF Document • 0 KB</div>
+                  </div>
+                </div>
+                <button type="button" class="btn-clear-file" onclick="clearUploadedFile(event)" title="Clear uploaded file">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </button>
+              </div>
+
+              <div class="panel-controls">
+                <div class="control-col">
+                  <label class="control-label">Document Category</label>
+                  <select id="doc-type-select" class="form-select">
+                    <option value="Loan Application">Loan Application</option>
+                    <option value="KYC Document" selected>KYC Document</option>
+                    <option value="Customer Support Ticket">Customer Support Ticket</option>
+                    <option value="Insurance Claim">Insurance Claim</option>
+                    <option value="General Document">General Document</option>
+                  </select>
+                </div>
+                <div class="control-col">
+                  <label class="control-label">AI Task Objective</label>
+                  <select id="task-select" class="form-select">
+                    <option value="summarize" selected>1. Summarize Document</option>
+                    <option value="extract">2. Extract Important Information</option>
+                    <option value="key_points">3. Generate Key Points</option>
+                    <option value="qa">4. Answer Questions About Document</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- View Switcher for Panel A -->
+              <div id="panel-a-view-switcher" class="panel-view-switcher">
+                <button type="button" id="btn-view-orig-img" class="view-tab-btn" onclick="switchPanelAView('preview')" style="display: none;">
+                  🖼️ Document Preview
+                </button>
+                <button type="button" id="btn-view-orig-text" class="view-tab-btn active" onclick="switchPanelAView('text')">
+                  📝 Edit Document
+                </button>
+                <button type="button" id="btn-view-orig-highlight" class="view-tab-btn" onclick="switchPanelAView('highlight')">
+                  🔍 Highlighted PII (<span id="panel-a-highlight-count">0</span>)
+                </button>
+              </div>
+
+              <div class="textarea-container">
+                <!-- Original Visual Document Preview Container -->
+                <div id="original-image-preview-container" class="preview-scroll-frame" style="display: none;">
+                  <img id="original-image-preview" class="document-preview-img" src="" alt="Original Uploaded Document">
+                </div>
+
+                <textarea 
+                  id="original-document-input" 
+                  class="code-textarea" 
+                  placeholder="Paste or enter an Indian enterprise document containing personal information (Names, Aadhaar, PAN, GSTIN, Voter ID, Addresses, Phone numbers)...&#10;&#10;Or choose a sample from the 'Load Sample...' dropdown above."
+                >My name is Rahul Sharma. My Aadhaar number is 1234-5678-9012 and my PAN is ABCDE1234F. I reside at Flat 402, Sai Residency, Indiranagar, Bengaluru, Karnataka 560038. My contact mobile is +91 98765 43210. I am applying for verification of my retail investment profile.</textarea>
+
+                <!-- Original Document Highlight Overlay View -->
+                <div id="original-document-highlight-view" class="code-textarea highlight-view" style="display: none;">
+                  <div class="empty-state-text">Click 'Protect My Data' to detect and highlight sensitive personal entities across languages...</div>
+                </div>
+              </div>
+
+              <div class="panel-footer">
+                <span class="char-count" id="input-char-count">287 characters</span>
+                <button id="btn-protect-data" class="btn btn-primary btn-glow" onclick="processPrivacyGateway()">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                  <span>Protect My Data</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- PANEL B: SANITIZED PAYLOAD & MASKED DOCUMENT PREVIEW -->
+            <div class="panel-card panel-sanitized">
+              <div class="panel-header">
+                <div class="panel-title-group">
+                  <span class="panel-step-badge badge-sanitized">Panel B</span>
+                  <h3 class="panel-title">Sanitized Payload & Masked Preview</h3>
+                </div>
+                <div id="security-leakage-badge" class="security-check-badge badge-passed">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                  <span id="leakage-badge-text">Raw PII Check: Ready</span>
+                </div>
+              </div>
+
+              <!-- Multi-Stage Pipeline Status Ribbon -->
+              <div class="pipeline-status-ribbon" id="pipeline-status-ribbon">
+                <span class="status-pill status-ready" id="status-lang" title="Detected Document Languages">🌐 Lang: Detecting...</span>
+                <span class="status-pill status-ready" id="status-ocr" title="OCR Text Recognition Status">🔍 OCR: Ready</span>
+                <span class="status-pill status-ready" id="status-pii" title="PII Text Detection Status">🛡️ PII: Ready</span>
+                <span class="status-pill status-ready" id="status-photo" title="Photograph & Face Detection Status">📸 Photo: 0 Detected</span>
+                <span class="status-pill status-ready" id="status-masking" title="Image Masking & Flattening Status">⬛ Masking: Irreversible</span>
+                <span class="status-pill status-passed" id="status-leakage" title="Pre-Flight Zero Leakage Guarantee">🔒 Leakage: 0% Egress</span>
+              </div>
+
+              <div class="panel-subtitle-bar">
+                <div class="view-tab-group" id="panel-b-view-switcher">
+                  <button type="button" id="btn-view-masked-img" class="view-tab-btn active" onclick="switchPanelBView('preview')">
+                    ⬛ Masked Preview (PNG)
+                  </button>
+                  <button type="button" id="btn-view-masked-text" class="view-tab-btn" onclick="switchPanelBView('text')">
+                    📄 Sanitized Text
+                  </button>
+                </div>
+                <div style="display: flex; gap: 6px; align-items: center;">
+                  <button id="btn-download-masked-img" class="btn-copy-icon" onclick="downloadMaskedImage()" title="Download Redacted PNG Image" style="display: none;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  </button>
+                  <button class="btn-copy-icon" onclick="copyTextFromElement('sanitized-payload-output')" title="Copy Sanitized Payload">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="textarea-container">
+                <!-- Masked Redacted Document Preview Container -->
+                <div id="masked-image-preview-container" class="preview-scroll-frame" style="display: none;">
+                  <img id="masked-image-preview" class="document-preview-img" src="" alt="Masked Document Preview with Solid Black Redacted Photo and PII">
+                </div>
+
+                <div id="sanitized-payload-output" class="code-output payload-box">
+                  <div class="empty-state-text">Sanitized outbound text will appear here with consistent placeholders (&lt;PERSON_1&gt;, &lt;AADHAAR_1&gt;, &lt;PAN_1&gt;)...</div>
+                </div>
+              </div>
+
+              <!-- Sensitive text & photo locations metadata banner -->
+              <div id="sensitive-locations-meta" class="sensitive-locations-meta" style="display: none;"></div>
+
+              <!-- Detected Entities Section -->
+              <div class="entities-section">
+                <div class="entities-header">
+                  <span class="entities-title">Detected Sensitive Information & Photo Redactions:</span>
+                  <span class="entities-count" id="detected-entities-count">0 Detected • 0 Photos</span>
+                </div>
+                <div id="detected-entities-list" class="entities-pill-container">
+                  <span class="no-entities-pill">No entities extracted yet</span>
+                </div>
+              </div>
+
+              <div class="panel-footer panel-footer-info">
+                <span class="shield-guarantee-text">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  Strict Pre-Flight Leakage Scanner Active (0% Egress)
+                </span>
+              </div>
+            </div>
+
+            <!-- PANEL C: FINAL RESTORED RESPONSE -->
+            <div class="panel-card panel-restored">
+              <div class="panel-header">
+                <div class="panel-title-group">
+                  <span class="panel-step-badge badge-restored">Panel C</span>
+                  <h3 class="panel-title">Final Restored Response</h3>
+                </div>
+                <div class="header-action-group">
+                  <button class="btn btn-secondary btn-sm" onclick="copyTextFromElement('final-response-output')">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                    <span>Copy</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="meta-chips-bar">
+                <span class="meta-chip">
+                  <span class="chip-label">Latency:</span>
+                  <span class="chip-val" id="resp-latency">-- ms</span>
+                </span>
+                <span class="meta-chip">
+                  <span class="chip-label">Entities:</span>
+                  <span class="chip-val" id="resp-entity-count">--</span>
+                </span>
+                <span class="meta-chip">
+                  <span class="chip-label">Reinsertion:</span>
+                  <span class="chip-val chip-success" id="resp-reinsert-status">--</span>
+                </span>
+              </div>
+
+              <div class="textarea-container">
+                <div id="final-response-output" class="code-output restored-box">
+                  <div class="empty-state-text">After external LLM generates the output, original personal details are automatically restored locally in transient memory. Result will appear here...</div>
+                </div>
+              </div>
+
+              <!-- Toggle to inspect raw LLM output vs restored -->
+              <div class="response-toggle-bar">
+                <button class="btn-text-toggle" onclick="toggleRawLLMView()">
+                  <span id="raw-toggle-label">View Raw Model Output (Before Local Reinsertion)</span>
+                </button>
+                <div id="raw-llm-container" class="raw-llm-container" style="display: none;">
+                  <div class="raw-llm-title">Raw Outbound AI Output from External Provider (Groq Cloud):</div>
+                  <div id="raw-llm-output-text" class="raw-llm-box">--</div>
+                </div>
+              </div>
+
+              <div class="panel-footer panel-footer-info">
+                <span class="model-meta-info" id="gateway-model-used-label">Model: openai/gpt-oss-120b</span>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ================================================================= -->
+        <!-- 3. DOCUMENT TESTING PAGE -->
+        <!-- ================================================================= -->
+        <section id="page-testing" class="page-view">
+          <div class="page-title-row">
+            <div>
+              <h2 class="view-title">Synthetic Document Evaluation & Benchmark</h2>
+              <p class="view-subtitle">Evaluate local detection and reinsertion across 50 labeled Indian enterprise documents</p>
+            </div>
+            <div class="testing-actions">
+              <button class="btn btn-secondary" onclick="loadRandomSampleDoc()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/></svg>
+                Load Sample Document
+              </button>
+              <button id="btn-run-all-tests" class="btn btn-primary btn-glow" onclick="runSyntheticDatasetBenchmark()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                Test All 50 Documents
+              </button>
+            </div>
+          </div>
+
+          <!-- Benchmark Metrics Summary Ribbon -->
+          <div class="benchmark-ribbon-grid">
+            <div class="ribbon-card">
+              <span class="ribbon-label">Total Documents</span>
+              <span class="ribbon-val" id="test-total-docs">50</span>
+              <span class="ribbon-sub">Indian synthetic dataset</span>
+            </div>
+            <div class="ribbon-card">
+              <span class="ribbon-label">Expected Entities</span>
+              <span class="ribbon-val" id="test-expected-ent">270</span>
+              <span class="ribbon-sub">Ground truth labels</span>
+            </div>
+            <div class="ribbon-card">
+              <span class="ribbon-label">Detected Entities</span>
+              <span class="ribbon-val" id="test-detected-ent">267</span>
+              <span class="ribbon-sub">Locally identified</span>
+            </div>
+            <div class="ribbon-card">
+              <span class="ribbon-label">Correctly Detected (TP)</span>
+              <span class="ribbon-val text-success" id="test-tp-count">265</span>
+              <span class="ribbon-sub">True Positive matches</span>
+            </div>
+            <div class="ribbon-card ribbon-clickable ribbon-card-fn" id="ribbon-fn-card" onclick="scrollToBenchmarkSection('benchmark-fn-section')" title="Click to view detailed Missed Entities (FN)">
+              <span class="ribbon-label">Missed Entities (FN) ↘</span>
+              <span class="ribbon-val text-danger" id="test-fn-count">5</span>
+              <span class="ribbon-sub">False Negatives (Click to view)</span>
+            </div>
+            <div class="ribbon-card ribbon-clickable ribbon-card-fp" id="ribbon-fp-card" onclick="scrollToBenchmarkSection('benchmark-fp-section')" title="Click to view detailed False Detections (FP)">
+              <span class="ribbon-label">False Detections (FP) ↘</span>
+              <span class="ribbon-val text-orange" id="test-fp-count">2</span>
+              <span class="ribbon-sub">False Positives (Click to view)</span>
+            </div>
+            <div class="ribbon-card highlight-emerald">
+              <span class="ribbon-label">Precision & Recall</span>
+              <span class="ribbon-val text-success" id="test-pr-score">99.25% / 98.15%</span>
+              <span class="ribbon-sub">F1-Score: 0.987</span>
+            </div>
+          </div>
+
+          <!-- =============================================================== -->
+          <!-- SECTION 1: DETAILED MISSED ENTITIES (FN)                       -->
+          <!-- =============================================================== -->
+          <div class="card table-card card-fn-border mb-4" id="benchmark-fn-section">
+            <div class="card-header">
+              <div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span class="badge-mini badge-fn">RECALL TARGET</span>
+                  <h3 class="card-title">Section 1: Missed Entities (False Negatives - FN)</h3>
+                </div>
+                <p class="card-subtitle">Actual ground-truth sensitive personal entities that were not captured by local detection rules</p>
+              </div>
+              <div class="table-meta-text text-danger" id="fn-table-meta">Showing 5 Missed Entities</div>
+            </div>
+
+            <div class="table-responsive">
+              <table class="data-table" id="fn-details-table">
+                <thead>
+                  <tr>
+                    <th style="width: 48px;">#</th>
+                    <th>Document Name</th>
+                    <th>Entity Type</th>
+                    <th>Actual Missed Entity Value</th>
+                    <th>Text Context</th>
+                    <th style="width: 120px;">Action</th>
+                  </tr>
+                </thead>
+                <tbody id="fn-table-body">
+                  <tr><td colspan="6" class="text-center py-4">Evaluating benchmark false negatives...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- =============================================================== -->
+          <!-- SECTION 2: DETAILED FALSE DETECTIONS (FP)                     -->
+          <!-- =============================================================== -->
+          <div class="card table-card card-fp-border mb-4" id="benchmark-fp-section">
+            <div class="card-header">
+              <div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span class="badge-mini badge-fp">PRECISION TARGET</span>
+                  <h3 class="card-title">Section 2: False Detections (False Positives - FP)</h3>
+                </div>
+                <p class="card-subtitle">Tokens flagged as sensitive PII by local rules that were not labeled as personal data in ground truth</p>
+              </div>
+              <div class="table-meta-text text-orange" id="fp-table-meta">Showing 2 False Detections</div>
+            </div>
+
+            <div class="table-responsive">
+              <table class="data-table" id="fp-details-table">
+                <thead>
+                  <tr>
+                    <th style="width: 48px;">#</th>
+                    <th>Document Name</th>
+                    <th>Incorrectly Detected Value</th>
+                    <th>Predicted Entity Type</th>
+                    <th>Confidence</th>
+                    <th>Text Context</th>
+                    <th style="width: 120px;">Action</th>
+                  </tr>
+                </thead>
+                <tbody id="fp-table-body">
+                  <tr><td colspan="7" class="text-center py-4">Evaluating benchmark false positives...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Documents Table Card -->
+          <div class="card table-card">
+            <div class="card-header">
+              <div class="filter-group">
+                <input type="text" id="testing-search-input" class="form-input form-input-sm" placeholder="Search by Document Title or ID..." oninput="filterTestingTable()">
+                <select id="testing-category-filter" class="form-select form-select-sm" onchange="filterTestingTable()">
+                  <option value="ALL">All Categories</option>
+                  <option value="Loan Application">Loan Applications (13)</option>
+                  <option value="KYC Document">KYC Documents (13)</option>
+                  <option value="Customer Support Ticket">Customer Support Tickets (12)</option>
+                  <option value="Insurance Claim">Insurance Claims (12)</option>
+                </select>
+              </div>
+              <div class="table-meta-text" id="testing-table-meta">Showing 50 documents</div>
+            </div>
+
+            <div class="table-responsive">
+              <table class="data-table" id="testing-documents-table">
+                <thead>
+                  <tr>
+                    <th>Doc ID</th>
+                    <th>Document Category</th>
+                    <th>Document Title</th>
+                    <th>Expected Entities</th>
+                    <th>Detected Entities</th>
+                    <th>Status</th>
+                    <th>Latency</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="testing-table-body">
+                  <tr><td colspan="8" class="text-center py-4">Loading synthetic documents...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================= -->
+        <!-- 4. AUDIT LOGS PAGE -->
+        <!-- ================================================================= -->
+        <section id="page-audit" class="page-view">
+          <div class="page-title-row">
+            <div>
+              <h2 class="view-title">Verifiable Audit Logs</h2>
+              <p class="view-subtitle">Immutable records of sanitized payloads, leakage checks, and telemetry (Supabase & Local Vault)</p>
+            </div>
+            <div class="audit-actions">
+              <button class="btn btn-secondary btn-sm" onclick="fetchAuditLogs()">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+                Refresh Logs
+              </button>
+            </div>
+          </div>
+
+          <!-- Strict Compliance Banner -->
+          <div class="security-banner">
+            <div class="security-banner-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <div class="security-banner-content">
+              <h4>Digital Personal Data Protection (DPDP) Act, 2023 - Strict Zero Storage Policy</h4>
+              <p>Original raw documents, unmasked PII strings (Aadhaar, PAN, Passports), and encryption mappings are <strong>NEVER stored in Supabase or disk logs</strong>. Only non-reversible sanitized payloads and safe processing telemetry are permanently archived.</p>
+            </div>
+          </div>
+
+          <!-- Audit Table with Filters -->
+          <div class="card table-card">
+            <div class="card-header">
+              <div class="filter-group">
+                <input type="text" id="audit-search-input" class="form-input form-input-sm" placeholder="Search by Request ID or payload..." oninput="fetchAuditLogs()">
+                <select id="audit-type-filter" class="form-select form-select-sm" onchange="fetchAuditLogs()">
+                  <option value="ALL">All Categories</option>
+                  <option value="Loan Application">Loan Application</option>
+                  <option value="KYC Document">KYC Document</option>
+                  <option value="Customer Support Ticket">Customer Support Ticket</option>
+                  <option value="Insurance Claim">Insurance Claim</option>
+                  <option value="General Document">General Document</option>
+                </select>
+                <select id="audit-status-filter" class="form-select form-select-sm" onchange="fetchAuditLogs()">
+                  <option value="ALL">All Statuses</option>
+                  <option value="SUCCESS">Success</option>
+                  <option value="LEAKAGE_PREVENTED">Leakage Blocked</option>
+                </select>
+              </div>
+              <div class="table-meta-text" id="audit-table-meta">0 Records</div>
+            </div>
+
+            <div class="table-responsive">
+              <table class="data-table" id="audit-logs-table">
+                <thead>
+                  <tr>
+                    <th>Request ID</th>
+                    <th>Timestamp</th>
+                    <th>Document Category</th>
+                    <th>Masked Entities</th>
+                    <th>Model Used</th>
+                    <th>Leakage Guard</th>
+                    <th>Reinsertion</th>
+                    <th>Latency</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="audit-table-body">
+                  <tr><td colspan="9" class="text-center py-4">No audit logs recorded yet. Run a document through Privacy Gateway.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================= -->
+        <!-- 5. PERFORMANCE METRICS PAGE -->
+        <!-- ================================================================= -->
+        <section id="page-metrics" class="page-view">
+          <div class="page-title-row">
+            <div>
+              <h2 class="view-title">Performance & Accuracy Telemetry</h2>
+              <p class="view-subtitle">Calculated precision, recall, and zero-leakage verification metrics from test benchmarks</p>
+            </div>
+            <div class="metrics-actions">
+              <button class="btn btn-primary btn-sm" onclick="runSyntheticDatasetBenchmark()">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+                Re-Calculate Benchmarks
+              </button>
+            </div>
+          </div>
+
+          <!-- Primary Metric Cards -->
+          <div class="metrics-grid">
+            <div class="metric-big-card card-emerald">
+              <div class="metric-top">
+                <span class="metric-title">PII Leakage Count</span>
+                <span class="metric-badge-shield">CRITICAL TARGET</span>
+              </div>
+              <div class="metric-number text-success" id="pm-leakage-count">0</div>
+              <div class="metric-desc">Zero raw PII values ever transmitted to external AI providers. 100% compliant.</div>
+            </div>
+
+            <div class="metric-big-card">
+              <div class="metric-top">
+                <span class="metric-title">Detection Precision</span>
+                <span class="metric-badge">Presidio + Regex</span>
+              </div>
+              <div class="metric-number" id="pm-precision">99.25%</div>
+              <div class="metric-desc">Proportion of detected entities that were true sensitive personal data.</div>
+            </div>
+
+            <div class="metric-big-card">
+              <div class="metric-top">
+                <span class="metric-title">Detection Recall</span>
+                <span class="metric-badge">Ground Truth</span>
+              </div>
+              <div class="metric-number" id="pm-recall">98.15%</div>
+              <div class="metric-desc">Proportion of actual sensitive personal data correctly captured.</div>
+            </div>
+
+            <div class="metric-big-card">
+              <div class="metric-top">
+                <span class="metric-title">Reinsertion Accuracy</span>
+                <span class="metric-badge">Local Restore</span>
+              </div>
+              <div class="metric-number" id="pm-reinsertion">100.0%</div>
+              <div class="metric-desc">Placeholders safely matched and restored with 0 cross-contamination.</div>
+            </div>
+
+            <div class="metric-big-card">
+              <div class="metric-top">
+                <span class="metric-title">Average Gateway Latency</span>
+                <span class="metric-badge">Throughput</span>
+              </div>
+              <div class="metric-number" id="pm-latency">0.78 ms</div>
+              <div class="metric-desc">Ultra-low detection overhead prior to external network requests.</div>
+            </div>
+
+            <div class="metric-big-card">
+              <div class="metric-top">
+                <span class="metric-title">Total Documents Tested</span>
+                <span class="metric-badge">Dataset</span>
+              </div>
+              <div class="metric-number" id="pm-total-tested">50</div>
+              <div class="metric-desc">Loan Applications, KYC, Support, and Insurance files evaluated.</div>
+            </div>
+          </div>
+
+          <!-- Entity-Specific Breakdown Cards -->
+          <div class="card mt-4">
+            <div class="card-header">
+              <h3 class="card-title">Entity-Specific Detection Breakdown</h3>
+              <span class="card-subtitle">Precision, Recall, and Identification performance per Indian PII type</span>
+            </div>
+            <div class="entity-breakdown-grid" id="entity-breakdown-cards">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================= -->
+        <!-- 6. SETTINGS PAGE -->
+        <!-- ================================================================= -->
+        <section id="page-settings" class="page-view">
+          <div class="page-title-row">
+            <div>
+              <h2 class="view-title">Gateway Settings & Integrations</h2>
+              <p class="view-subtitle">Configure Groq Cloud High-Speed Inference API, Supabase Vault, and PII sensitivity</p>
+            </div>
+            <div>
+              <button class="btn btn-primary" onclick="saveSettings()">Save Configuration</button>
+            </div>
+          </div>
+
+          <div class="settings-grid">
+            <!-- Groq Cloud High-Speed Inference Card -->
+            <div class="card settings-card">
+              <div class="card-header">
+                <h3 class="card-title">Groq Cloud High-Speed Inference</h3>
+                <span class="badge-mini" id="settings-groq-status">Checking...</span>
+              </div>
+              <div class="settings-body">
+                <div class="form-group">
+                  <label class="form-label">Groq Cloud API Key</label>
+                  <div class="input-password-wrap">
+                    <input type="password" id="input-groq-key" class="form-input" placeholder="gsk_xxxxxxxxxxxxxxxxxxxxxx">
+                    <button type="button" class="btn-toggle-eye" onclick="togglePasswordVisibility('input-groq-key')">👁</button>
+                  </div>
+                  <span class="form-hint">Used for live cloud LLM inference via Groq Cloud API. Stored strictly in backend memory/env.</span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Groq Base URL</label>
+                  <input type="text" id="input-groq-base-url" class="form-input" value="https://api.groq.com/openai/v1" placeholder="https://api.groq.com/openai/v1">
+                  <span class="form-hint">Groq OpenAI-compatible endpoint base URL.</span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">External LLM Model</label>
+                  <select id="select-groq-model" class="form-select">
+                    <option value="openai/gpt-oss-120b" selected>openai/gpt-oss-120b (Configured Default)</option>
+                    <option value="llama-3.3-70b-versatile">llama-3.3-70b-versatile (Groq Ultra-Fast)</option>
+                    <option value="llama-3.1-8b-instant">llama-3.1-8b-instant (Groq Instant)</option>
+                    <option value="mixtral-8x7b-32768">mixtral-8x7b-32768</option>
+                    <option value="gemma2-9b-it">gemma2-9b-it</option>
+                  </select>
+                  <span class="form-hint">External AI model configured to receive only sanitized payload.</span>
+                </div>
+
+                <div class="form-group mt-3">
+                  <button type="button" id="btn-test-groq-conn" class="btn btn-secondary btn-sm" onclick="testGroqLiveConnection()">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+                    <span>Test Groq Connection</span>
+                  </button>
+                  <div id="groq-test-status" class="mt-2 text-xs" style="display:none; font-family: var(--font-mono); font-size: 0.74rem; line-height: 1.4;"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Supabase Configuration Card -->
+            <div class="card settings-card">
+              <div class="card-header">
+                <h3 class="card-title">Supabase Database Integration</h3>
+                <span class="badge-mini" id="settings-supabase-status">Checking...</span>
+              </div>
+              <div class="settings-body">
+                <div class="form-group">
+                  <label class="form-label">Supabase Project URL</label>
+                  <input type="text" id="input-sb-url" class="form-input" placeholder="https://your-project-id.supabase.co">
+                  <span class="form-hint">Supabase project endpoint for safe audit logging.</span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Supabase Anon / Service Role Key</label>
+                  <div class="input-password-wrap">
+                    <input type="password" id="input-sb-key" class="form-input" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...">
+                    <button type="button" class="btn-toggle-eye" onclick="togglePasswordVisibility('input-sb-key')">👁</button>
+                  </div>
+                  <span class="form-hint">If left empty, local safe audit logging continues automatically.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Detection Engine Sensitivity Card -->
+            <div class="card settings-card">
+              <div class="card-header">
+                <h3 class="card-title">PII Detection Sensitivity</h3>
+                <span class="badge-mini success">Presidio Rules Active</span>
+              </div>
+              <div class="settings-body">
+                <div class="form-group">
+                  <div class="slider-header">
+                    <label class="form-label">Confidence Score Threshold: <span id="sensitivity-val">0.50</span></label>
+                  </div>
+                  <input type="range" id="input-sensitivity" min="0.1" max="0.95" step="0.05" value="0.5" class="form-range" oninput="document.getElementById('sensitivity-val').innerText = parseFloat(this.value).toFixed(2)">
+                  <div class="slider-scale">
+                    <span>0.1 (High Recall)</span>
+                    <span>0.5 (Balanced)</span>
+                    <span>0.95 (High Precision)</span>
+                  </div>
+                </div>
+
+                <div class="form-group mt-3">
+                  <label class="form-label">Active Recognizers</label>
+                  <div class="recognizers-check-grid">
+                    <label class="check-item"><input type="checkbox" checked disabled> <span>Aadhaar (UIDAI + Verhoeff)</span></label>
+                    <label class="check-item"><input type="checkbox" checked disabled> <span>PAN Card (Income Tax)</span></label>
+                    <label class="check-item"><input type="checkbox" checked disabled> <span>GSTIN (State Code + Structure)</span></label>
+                    <label class="check-item"><input type="checkbox" checked disabled> <span>Voter ID (EPIC)</span></label>
+                    <label class="check-item"><input type="checkbox" checked disabled> <span>Indian Passport</span></label>
+                    <label class="check-item"><input type="checkbox" checked disabled> <span>Indian Phone Numbers (+91)</span></label>
+                    <label class="check-item"><input type="checkbox" checked disabled> <span>Indian Addresses & PIN Codes</span></label>
+                    <label class="check-item"><input type="checkbox" checked disabled> <span>Personal Names (Indian NER)</span></label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hackathon Demonstration Quick Guide -->
+            <div class="card settings-card highlight-border">
+              <div class="card-header">
+                <h3 class="card-title">Hackathon Demonstration Guide</h3>
+                <span class="badge-mini info">MineArena 1.0</span>
+              </div>
+              <div class="settings-body demo-guide-text">
+                <p><strong>PS-02 Quick Verification Steps for Judges:</strong></p>
+                <ol>
+                  <li>Navigate to <strong>Privacy Gateway</strong>.</li>
+                  <li>Click <strong>"Load Sample Indian Document..."</strong> or enter your own text.</li>
+                  <li>Click <strong>"Protect My Data"</strong> to execute the 10-step DPDP pipeline.</li>
+                  <li>Review <strong>Panel B</strong> to verify exact consistent placeholders (&lt;PERSON_1&gt;, &lt;AADHAAR_1&gt;, &lt;PAN_1&gt;) and the Zero Raw PII check badge.</li>
+                  <li>Review <strong>Panel C</strong> to verify local reinsertion with original names/numbers restored.</li>
+                  <li>Navigate to <strong>Document Testing</strong> and click <strong>"Test All 50 Documents"</strong> to verify real precision/recall scores.</li>
+                  <li>Inspect <strong>Audit Logs</strong> to confirm raw PII is never recorded.</li>
+                </ol>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- MODAL: SAFE AUDIT RECORD INSPECTOR -->
+  <div id="audit-modal" class="modal-backdrop" style="display: none;">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title">Audit Record Inspector</h3>
+        <button class="btn-close-modal" onclick="closeAuditModal()">×</button>
+      </div>
+      <div class="modal-body" id="audit-modal-content">
+        <!-- Injected via app.js -->
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="closeAuditModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: SYNTHETIC DOCUMENT INSPECTOR -->
+  <div id="doc-modal" class="modal-backdrop" style="display: none;">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title" id="doc-modal-title">Synthetic Document Details</h3>
+        <button class="btn-close-modal" onclick="closeDocModal()">×</button>
+      </div>
+      <div class="modal-body" id="doc-modal-content">
+        <!-- Injected via app.js -->
+      </div>
+      <div class="modal-footer" id="doc-modal-footer">
+        <button class="btn btn-secondary" onclick="closeDocModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Core JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>

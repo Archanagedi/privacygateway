@@ -1,0 +1,1524 @@
+[
+  {
+    "id": "DOC-ML-EN-001",
+    "language": "English",
+    "category": "Identity Document",
+    "title": "Aadhaar KYC Verification - Rajesh Verma",
+    "text": "Unique Identification Authority of India (UIDAI). Name: Rajesh Verma. Date of Birth: 12/04/1985. Aadhaar Number: 5489 2103 4567. Address: Flat 101, Palm Grove Apartments, Whitefield, Bengaluru, Karnataka 560066. Mobile: 9845012345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Rajesh Verma"
+      },
+      {
+        "type": "DATE_OF_BIRTH",
+        "value": "12/04/1985"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "5489 2103 4567"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "Flat 101, Palm Grove Apartments, Whitefield, Bengaluru, Karnataka 560066"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9845012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-EN-002",
+    "language": "English",
+    "category": "Loan Application",
+    "title": "Retail Loan Application - Sunita Rao",
+    "text": "Applicant Sunita Rao has applied for a personal credit facility of INR 5,00,000. PAN: BZTPR4512Q. Bank Account Number: 91827364501928, IFSC Code: HDFC0001234. Email: sunita.rao@outlook.com. Contact: +91 97412 34567.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Sunita Rao"
+      },
+      {
+        "type": "PAN",
+        "value": "BZTPR4512Q"
+      },
+      {
+        "type": "BANK_ACCOUNT",
+        "value": "91827364501928"
+      },
+      {
+        "type": "IFSC_CODE",
+        "value": "HDFC0001234"
+      },
+      {
+        "type": "EMAIL_ADDRESS",
+        "value": "sunita.rao@outlook.com"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "+91 97412 34567"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-EN-003",
+    "language": "English",
+    "category": "Employee Record",
+    "title": "Employee Onboarding Dossier - Vikram Patel",
+    "text": "Employee Name: Vikram Patel. DOB: 25/11/1992. Passport Number: P9182734. Permanent Account Number: ABCPV7621L. Residential Address: House No 45, Green Meadows, Koramangala 4th Block, Bengaluru, Karnataka 560034.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Vikram Patel"
+      },
+      {
+        "type": "DATE_OF_BIRTH",
+        "value": "25/11/1992"
+      },
+      {
+        "type": "PASSPORT",
+        "value": "P9182734"
+      },
+      {
+        "type": "PAN",
+        "value": "ABCPV7621L"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "House No 45, Green Meadows, Koramangala 4th Block, Bengaluru, Karnataka 560034"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-EN-004",
+    "language": "English",
+    "category": "Customer Form",
+    "title": "Voter ID Registration - Ananya Sen",
+    "text": "Election Commission of India. Elector Name: Ananya Sen. Voter ID: KTK9823412. Father's Name: Subhash Sen. Residence Address: Plot 12, Silver Oaks Colony, Sarjapur Road, Bengaluru, Karnataka 560102. Phone: 9886012345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Ananya Sen"
+      },
+      {
+        "type": "VOTER_ID",
+        "value": "KTK9823412"
+      },
+      {
+        "type": "PERSON",
+        "value": "Subhash Sen"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "Plot 12, Silver Oaks Colony, Sarjapur Road, Bengaluru, Karnataka 560102"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9886012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-EN-005",
+    "language": "English",
+    "category": "Banking Application",
+    "title": "Savings Bank Opening Form - Deepak Joshi",
+    "text": "Customer Deepak Joshi opened account with Bank of Baroda. Aadhaar: 3214 5678 9012. PAN: CKLPD3412M. Savings Account: 20192837465019, IFSC Code: BARB0KORAMA. Email: deepak.joshi@gmail.com.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Deepak Joshi"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "3214 5678 9012"
+      },
+      {
+        "type": "PAN",
+        "value": "CKLPD3412M"
+      },
+      {
+        "type": "BANK_ACCOUNT",
+        "value": "20192837465019"
+      },
+      {
+        "type": "IFSC_CODE",
+        "value": "BARB0KORAMA"
+      },
+      {
+        "type": "EMAIL_ADDRESS",
+        "value": "deepak.joshi@gmail.com"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-EN-006",
+    "language": "English",
+    "category": "Insurance Claim",
+    "title": "Health Insurance Policy - Meera Krishnan",
+    "text": "Policyholder Meera Krishnan filed a medical reimbursement request. Date of Birth: 05/09/1988. Mobile Number: +91 94480 12345. Residing at: Flat 204, Shanti Niketan, Malleshwaram, Bengaluru, Karnataka 560003. PAN: DGMPK8923R.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Meera Krishnan"
+      },
+      {
+        "type": "DATE_OF_BIRTH",
+        "value": "05/09/1988"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "+91 94480 12345"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "Flat 204, Shanti Niketan, Malleshwaram, Bengaluru, Karnataka 560003"
+      },
+      {
+        "type": "PAN",
+        "value": "DGMPK8923R"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-EN-007",
+    "language": "English",
+    "category": "Customer Support Ticket",
+    "title": "Profile Update Inquiry - Arvind Menon",
+    "text": "Customer Arvind Menon contacted support desk regarding KYC update. Aadhaar Card: 9876 5432 1098. New Mobile: 8765432109. Email address: arvind.menon@proton.me. GSTIN: 29ABCDE1234F1Z5.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Arvind Menon"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "9876 5432 1098"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "8765432109"
+      },
+      {
+        "type": "EMAIL_ADDRESS",
+        "value": "arvind.menon@proton.me"
+      },
+      {
+        "type": "GSTIN",
+        "value": "29ABCDE1234F1Z5"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-EN-008",
+    "language": "English",
+    "category": "Identity Document",
+    "title": "Passport Verification Sheet - Neha Agarwal",
+    "text": "Republic of India Passport Services. Traveler: Neha Agarwal. Passport No: J8765432. Date of Birth: 18/07/1994. Address: House No 78, Shanti Vihar, Jayanagar 3rd Block, Bengaluru, Karnataka 560011. Phone: 9844054321.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Neha Agarwal"
+      },
+      {
+        "type": "PASSPORT",
+        "value": "J8765432"
+      },
+      {
+        "type": "DATE_OF_BIRTH",
+        "value": "18/07/1994"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "House No 78, Shanti Vihar, Jayanagar 3rd Block, Bengaluru, Karnataka 560011"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9844054321"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-EN-009",
+    "language": "English",
+    "category": "Loan Application",
+    "title": "Business Term Loan Proposal - Sanjay Kulkarni",
+    "text": "Applicant Sanjay Kulkarni registered MSME loan application. Business GSTIN: 29AAACK1234A1Z8. Personal PAN: AACKP5432B. Bank Account: 60192837465192, IFSC Code: SBIN0004567. Contact Phone: 9731098765.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Sanjay Kulkarni"
+      },
+      {
+        "type": "GSTIN",
+        "value": "29AAACK1234A1Z8"
+      },
+      {
+        "type": "PAN",
+        "value": "AACKP5432B"
+      },
+      {
+        "type": "BANK_ACCOUNT",
+        "value": "60192837465192"
+      },
+      {
+        "type": "IFSC_CODE",
+        "value": "SBIN0004567"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9731098765"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-EN-010",
+    "language": "English",
+    "category": "Employee Record",
+    "title": "Consultant Engagement - Kavita Rao",
+    "text": "Consultant Kavita Rao has submitted tax documents. PAN: BNZPR6789K. Aadhaar Number: 6543 2109 8765. Residential Address: Flat 303, Sunrise Valley, Electronic City Phase 1, Bengaluru, Karnataka 560100. Contact: 9980123456.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Kavita Rao"
+      },
+      {
+        "type": "PAN",
+        "value": "BNZPR6789K"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "6543 2109 8765"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "Flat 303, Sunrise Valley, Electronic City Phase 1, Bengaluru, Karnataka 560100"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9980123456"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-KA-001",
+    "language": "Kannada",
+    "category": "Identity Document",
+    "title": "ಆಧಾರ್ ಗುರುತಿನ ಚೀಟಿ - ರಾಹುಲ್ ಶರ್ಮಾ",
+    "text": "ಭಾರತೀಯ ವಿಶಿಷ್ಟ ಗುರುತಿನ ಪ್ರಾಧಿಕಾರ. ಹೆಸರು: ರಾಹುಲ್ ಶರ್ಮಾ. ಹುಟ್ಟಿದ ದಿನಾಂಕ: 15/08/1990. ಆಧಾರ್ ಸಂಖ್ಯೆ: ೪೫೩೨ ೮೯೦೧ ೨೩೪೫. ವಿಳಾಸ: ಮನೆ ಸಂಖ್ಯೆ 12, ಗಾಂಧಿ ನಗರ, 4ನೇ ಮುಖ್ಯರಸ್ತೆ, ಜಯನಗರ, ಬೆಂಗಳೂರು, ಕರ್ನಾಟಕ 560041. ಮೊಬೈಲ್ ಸಂಖ್ಯೆ: ೯೮೭೬೫೪೩೨೧೦.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "ರಾಹುಲ್ ಶರ್ಮಾ"
+      },
+      {
+        "type": "DATE_OF_BIRTH",
+        "value": "15/08/1990"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "೪೫೩೨ ೮೯೦೧ ೨೩೪೫"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "ಮನೆ ಸಂಖ್ಯೆ 12, ಗಾಂಧಿ ನಗರ, 4ನೇ ಮುಖ್ಯರಸ್ತೆ, ಜಯನಗರ, ಬೆಂಗಳೂರು, ಕರ್ನಾಟಕ 560041"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "೯೮೭೬೫೪೩೨೧೦"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-KA-002",
+    "language": "Kannada",
+    "category": "Loan Application",
+    "title": "ಗೃಹ ಸಾಲದ ಅರ್ಜಿ - ಸುರೇಶ್ ಗೌಡ",
+    "text": "ಅರ್ಜಿದಾರರ ಹೆಸರು: ಸುರೇಶ್ ಗೌಡ. ಪ್ಯಾನ್ ಕಾರ್ಡ್ ಸಂಖ್ಯೆ: ABCDG1234F. ಬ್ಯಾಂಕ್ ಉಳಿತಾಯ ಖಾತೆ: ೯೧೮೨೭೩೬೪೫೦೧೨, ಐಎಫ್‌ಎಸ್‌ಸಿ ಕೋಡ್: SBIN0000813. ವಿಳಾಸ: ಪ್ಲಾಟ್ 45, ಕಾವೇರಿ ಬಡಾವಣೆ, ರಾಜಾಜಿನಗರ, ಬೆಂಗಳೂರು, ಕರ್ನಾಟಕ 560010. ದೂರವಾಣಿ: 9845123456.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "ಸುರೇಶ್ ಗೌಡ"
+      },
+      {
+        "type": "PAN",
+        "value": "ABCDG1234F"
+      },
+      {
+        "type": "BANK_ACCOUNT",
+        "value": "೯೧೮೨೭೩೬೪೫೦೧೨"
+      },
+      {
+        "type": "IFSC_CODE",
+        "value": "SBIN0000813"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "ಪ್ಲಾಟ್ 45, ಕಾವೇರಿ ಬಡಾವಣೆ, ರಾಜಾಜಿನಗರ, ಬೆಂಗಳೂರು, ಕರ್ನಾಟಕ 560010"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9845123456"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-KA-003",
+    "language": "Kannada",
+    "category": "Customer Form",
+    "title": "ಮತದಾರರ ನೋಂದಣಿ ದಾಖಲೆ - ಮಂಜುಳಾ ಕುಮಾರ್",
+    "text": "ಭಾರತೀಯ ಚುನಾವಣಾ ಆಯೋಗ. ಮತದಾರರ ಹೆಸರು: ಮಂಜುಳಾ ಕುಮಾರ್. ಮತದಾರರ ಗುರುತಿನ ಚೀಟಿ ಸಂಖ್ಯೆ: KA/04/023/123456. ಹುಟ್ಟಿದ ದಿನಾಂಕ: 20/05/1985. ವಿಳಾಸ: ಬಂಗಲೆ 8, ಶಾಂತಿ ನಗರ, ಮಲ್ಲೇಶ್ವರಂ, ಬೆಂಗಳೂರು, ಕರ್ನಾಟಕ 560003. ಮೊಬೈಲ್: 9448012345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "ಮಂಜುಳಾ ಕುಮಾರ್"
+      },
+      {
+        "type": "VOTER_ID",
+        "value": "KA/04/023/123456"
+      },
+      {
+        "type": "DATE_OF_BIRTH",
+        "value": "20/05/1985"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "ಬಂಗಲೆ 8, ಶಾಂತಿ ನಗರ, ಮಲ್ಲೇಶ್ವರಂ, ಬೆಂಗಳೂರು, ಕರ್ನಾಟಕ 560003"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9448012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-KA-004",
+    "language": "Kannada",
+    "category": "Banking Application",
+    "title": "ಸ್ಥಿರ ಠೇವಣಿ ಅರ್ಜಿ - ಪ್ರವೀಣ್ ಕುಮಾರ್",
+    "text": "ಗ್ರಾಹಕರ ಹೆಸರು: ಪ್ರವೀಣ್ ಕುಮಾರ್. ಆಧಾರ್ ಸಂಖ್ಯೆ: ೨೩೪೫ ೬೭೮೯ ೦೧೨೩. ಪ್ಯಾನ್: BKZPK9823M. ಬ್ಯಾಂಕ್ ಖಾತೆ ಸಂಖ್ಯೆ: 501029384756, ಐಎಫ್‌ಎಸ್‌ಸಿ: HDFC0000240. ಮೊಬೈಲ್ ಸಂಖ್ಯೆ: ೯೭೪೧೦೯೮೭೬೫.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "ಪ್ರವೀಣ್ ಕುಮಾರ್"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "೨೩೪೫ ೬೭೮೯ ೦೧೨೩"
+      },
+      {
+        "type": "PAN",
+        "value": "BKZPK9823M"
+      },
+      {
+        "type": "BANK_ACCOUNT",
+        "value": "501029384756"
+      },
+      {
+        "type": "IFSC_CODE",
+        "value": "HDFC0000240"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "೯೭೪೧೦೯೮೭೬೫"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-KA-005",
+    "language": "Kannada",
+    "category": "Employee Record",
+    "title": "ಉದ್ಯೋಗಿ ಪರಿಶೀಲನಾ ಪತ್ರ - ರಮೇಶ್ ಭಟ್",
+    "text": "ಉದ್ಯೋಗಿಯ ಹೆಸರು: ರಮೇಶ್ ಭಟ್. ಜನ್ಮ ದಿನಾಂಕ: 10/12/1987. ಪಾಸ್‌ಪೋರ್ಟ್ ಸಂಖ್ಯೆ: M1234567. ಶಾಶ್ವತ ವಿಳಾಸ: ಮನೆ ಸಂಖ್ಯೆ 24, ಶಾರದಾ ನಿಲಯ, ಬಸವನಗುಡಿ, ಬೆಂಗಳೂರು, ಕರ್ನಾಟಕ 560004. ದೂರವಾಣಿ ಸಂಖ್ಯೆ: 8765432109.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "ರಮೇಶ್ ಭಟ್"
+      },
+      {
+        "type": "DATE_OF_BIRTH",
+        "value": "10/12/1987"
+      },
+      {
+        "type": "PASSPORT",
+        "value": "M1234567"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "ಮನೆ ಸಂಖ್ಯೆ 24, ಶಾರದಾ ನಿಲಯ, ಬಸವನಗುಡಿ, ಬೆಂಗಳೂರು, ಕರ್ನಾಟಕ 560004"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "8765432109"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-KA-006",
+    "language": "Kannada",
+    "category": "Customer Support Ticket",
+    "title": "ವಿದ್ಯುತ್ ಸಂಪರ್ಕ ಅರ್ಜಿ - ಲಕ್ಷ್ಮಿ ದೇವಿ",
+    "text": "ಗ್ರಾಹಕರ ಹೆಸರು: ಲಕ್ಷ್ಮಿ ದೇವಿ. ಆಧಾರ್ ಗುರುತು ಸಂಖ್ಯೆ: ೮೯೦೧ ೨೩೪೫ ೬೭೮೯. ಪ್ಯಾನ್: AFGPL4567K. ವಿಳಾಸ: ಮನೆ ನಂ 105, ಅನ್ನಪೂರ್ಣೇಶ್ವರಿ ನಗರ, ನಾಗರಭಾವಿ, ಬೆಂಗಳೂರು, ಕರ್ನಾಟಕ 560072. ಸಂಪರ್ಕ ಸಂಖ್ಯೆ: ೯೮೮೬೦೯೮೭೬೫.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "ಲಕ್ಷ್ಮಿ ದೇವಿ"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "೮೯೦೧ ೨೩೪೫ ೬೭೮೯"
+      },
+      {
+        "type": "PAN",
+        "value": "AFGPL4567K"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "ಮನೆ ನಂ 105, ಅನ್ನಪೂರ್ಣೇಶ್ವರಿ ನಗರ, ನಾಗರಭಾವಿ, ಬೆಂಗಳೂರು, ಕರ್ನಾಟಕ 560072"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "೯೮೮೬೦೯೮೭೬೫"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-KA-007",
+    "language": "Kannada",
+    "category": "Loan Application",
+    "title": "ಕೃಷಿ ಸಾಲ ಮಂಜೂರಾತಿ - ಬಸವರಾಜ್ ಪಾಟೀಲ್",
+    "text": "ರೈತರ ಹೆಸರು: ಬಸವರಾಜ್ ಪಾಟೀಲ್. ಆಧಾರ್ ಸಂಖ್ಯೆ: ೬೭೮೯ ೦೧೨೩ ೪೫೬೭. ಪ್ಯಾನ್ ಕಾರ್ಡ್: BAZPP8901N. ಕೆನರಾ ಬ್ಯಾಂಕ್ ಖಾತೆ: 120034567890, ಐಎಫ್‌ಎಸ್‌ಸಿ ಕೋಡ್: CNRB0001234. ಮೊಬೈಲ್: 9449012345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "ಬಸವರಾಜ್ ಪಾಟೀಲ್"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "೬೭೮೯ ೦೧೨೩ ೪೫೬೭"
+      },
+      {
+        "type": "PAN",
+        "value": "BAZPP8901N"
+      },
+      {
+        "type": "BANK_ACCOUNT",
+        "value": "120034567890"
+      },
+      {
+        "type": "IFSC_CODE",
+        "value": "CNRB0001234"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9449012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-KA-008",
+    "language": "Kannada",
+    "category": "Insurance Claim",
+    "title": "ವಿಮಾ ಪರಿಹಾರ ಅರ್ಜಿ - ಗೀತಾ ಕುಲಕರ್ಣಿ",
+    "text": "ಪಾಲಿಸಿದಾರರ ಹೆಸರು: ಗೀತಾ ಕುಲಕರ್ಣಿ. ಹುಟ್ಟಿದ ದಿನಾಂಕ: 08/04/1993. ಪ್ಯಾನ್: CWZPK2345D. ವಾಸಸ್ಥಳ ವಿಳಾಸ: ಫ್ಲ್ಯಾಟ್ 201, ಗೋಕುಲ ಬಡಾವಣೆ, ಯಶವಂತಪುರ, ಬೆಂಗಳೂರು, ಕರ್ನಾಟಕ 560022. ಫೋನ್: 9844012345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "ಗೀತಾ ಕುಲಕರ್ಣಿ"
+      },
+      {
+        "type": "DATE_OF_BIRTH",
+        "value": "08/04/1993"
+      },
+      {
+        "type": "PAN",
+        "value": "CWZPK2345D"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "ಫ್ಲ್ಯಾಟ್ 201, ಗೋಕುಲ ಬಡಾವಣೆ, ಯಶವಂತಪುರ, ಬೆಂಗಳೂರು, ಕರ್ನಾಟಕ 560022"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9844012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-KA-009",
+    "language": "Kannada",
+    "category": "Customer Form",
+    "title": "ಪಾಸ್‌ಪೋರ್ಟ್ ಪರಿಶೀಲನೆ - ವೆಂಕಟೇಶ್ ಪ್ರಸಾದ್",
+    "text": "ಪಾಸ್‌ಪೋರ್ಟ್ ಸೇವಾ ಕೇಂದ್ರ. ಅರ್ಜಿದಾರರು: ವೆಂಕಟೇಶ್ ಪ್ರಸಾದ್. ಪಾಸ್‌ಪೋರ್ಟ್ ನಂ: M7654321. ಆಧಾರ್: ೪೩೨೧ ೦೯೮೭ ೬೫೪೩. ವಿಳಾಸ: ಮನೆ ನಂ 50, ಶ್ರೀ ಕೃಷ್ಣ ಕೃಪಾ, ವಿಜಯನಗರ, ಬೆಂಗಳೂರು, ಕರ್ನಾಟಕ 560040. ಮೊಬೈಲ್: 9742012345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "ವೆಂಕಟೇಶ್ ಪ್ರಸಾದ್"
+      },
+      {
+        "type": "PASSPORT",
+        "value": "M7654321"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "೪೩೨೧ ೦೯೮೭ ೬೫೪೩"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "ಮನೆ ನಂ 50, ಶ್ರೀ ಕೃಷ್ಣ ಕೃಪಾ, ವಿಜಯನಗರ, ಬೆಂಗಳೂರು, ಕರ್ನಾಟಕ 560040"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9742012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-KA-010",
+    "language": "Kannada",
+    "category": "Employee Record",
+    "title": "ಗುತ್ತಿಗೆ ನೌಕರರ ವಿವರ - ಅನಿಲ್ ಕುಮಾರ್",
+    "text": "ಉದ್ಯೋಗಿ ಹೆಸರು: ಅನಿಲ್ ಕುಮಾರ್. ಜನ್ಮ ದಿನ: 22/07/1991. ಆಧಾರ್ ಸಂಖ್ಯೆ: ೯೦೧೨ ೩೪೫೬ ೭೮೯೦. ಪ್ಯಾನ್: BZKPA5678Q. ವಾಸವಿರುವ ವಿಳಾಸ: ಪ್ಲಾಟ್ 18, ಚಾಮುಂಡೇಶ್ವರಿ ಬಡಾವಣೆ, ಕೆಂಗೇರಿ, ಬೆಂಗಳೂರು, ಕರ್ನಾಟಕ 560060. ಮೊಬೈಲ್: 9986012345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "ಅನಿಲ್ ಕುಮಾರ್"
+      },
+      {
+        "type": "DATE_OF_BIRTH",
+        "value": "22/07/1991"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "೯೦೧೨ ೩೪೫೬ ೭೮೯೦"
+      },
+      {
+        "type": "PAN",
+        "value": "BZKPA5678Q"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "ಪ್ಲಾಟ್ 18, ಚಾಮುಂಡೇಶ್ವರಿ ಬಡಾವಣೆ, ಕೆಂಗೇರಿ, ಬೆಂಗಳೂರು, ಕರ್ನಾಟಕ 560060"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9986012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-HI-001",
+    "language": "Hindi",
+    "category": "Identity Document",
+    "title": "आधार पहचान पत्र - अमित कुमार वर्मा",
+    "text": "भारतीय विशिष्ट पहचान प्राधिकरण (UIDAI)। नाम: अमित कुमार वर्मा। जन्म तिथि: 14/06/1986। आधार संख्या: ५४८९ २१०३ ४५६७। पता: मकान नंबर 24, तिलक मार्ग, सिविल लाइंस, लखनऊ, उत्तर प्रदेश 226001। मोबाइल नंबर: ९८३९०१२३४५।",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "अमित कुमार वर्मा"
+      },
+      {
+        "type": "DATE_OF_BIRTH",
+        "value": "14/06/1986"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "५४८९ २१०३ ४५६७"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "मकान नंबर 24, तिलक मार्ग, सिविल लाइंस, लखनऊ, उत्तर प्रदेश 226001"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "९८३९०१२३४५"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-HI-002",
+    "language": "Hindi",
+    "category": "Loan Application",
+    "title": "व्यक्तिगत ऋण आवेदन - सुनीता शर्मा",
+    "text": "आवेदक का नाम: सुनीता शर्मा। पैन कार्ड संख्या: BZTPS9823M। भारतीय स्टेट बैंक बचत खाता: ९१२८३७४६५०१९, आईएफएससी कोड: SBIN0001234। पता: फ्लैट 302, शांति कुंज, मालवीय नगर, जयपुर, राजस्थान 302017। संपर्क फोन: 9829012345।",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "सुनीता शर्मा"
+      },
+      {
+        "type": "PAN",
+        "value": "BZTPS9823M"
+      },
+      {
+        "type": "BANK_ACCOUNT",
+        "value": "९१२८३७४६५०१९"
+      },
+      {
+        "type": "IFSC_CODE",
+        "value": "SBIN0001234"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "फ्लैट 302, शांति कुंज, मालवीय नगर, जयपुर, राजस्थान 302017"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9829012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-HI-003",
+    "language": "Hindi",
+    "category": "Customer Form",
+    "title": "मतदाता पहचान पत्र - मनोज कुमार सिंह",
+    "text": "भारत निर्वाचन आयोग। निर्वाचक का नाम: मनोज कुमार सिंह। मतदाता पहचान पत्र क्रमांक: UP/02/015/876543। जन्म तारीख: 25/12/1989। स्थायी पता: मकान नं 56, शास्त्री नगर, मेरठ, उत्तर प्रदेश 250004। मोबाइल: 9897012345।",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "मनोज कुमार सिंह"
+      },
+      {
+        "type": "VOTER_ID",
+        "value": "UP/02/015/876543"
+      },
+      {
+        "type": "DATE_OF_BIRTH",
+        "value": "25/12/1989"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "मकान नं 56, शास्त्री नगर, मेरठ, उत्तर प्रदेश 250004"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9897012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-HI-004",
+    "language": "Hindi",
+    "category": "Banking Application",
+    "title": "बैंक खाता खोलने का फॉर्म - पूजा गुप्ता",
+    "text": "ग्राहक का नाम: पूजा गुप्ता। आधार नंबर: ३२१४ ५६७೮ ९०१२। पैन नंबर: CWZPG4512Q। बैंक खाता संख्या: 402918273645, आईएफएससी: PUNB0001234। संपर्क मोबाइल: ९७११०९८७६५।",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "पूजा गुप्ता"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "३२१४ ५६७೮ ९०१२"
+      },
+      {
+        "type": "PAN",
+        "value": "CWZPG4512Q"
+      },
+      {
+        "type": "BANK_ACCOUNT",
+        "value": "402918273645"
+      },
+      {
+        "type": "IFSC_CODE",
+        "value": "PUNB0001234"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "९७११०९८७६५"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-HI-005",
+    "language": "Hindi",
+    "category": "Employee Record",
+    "title": "कर्मचारी विवरण पत्र - राजेश तिवारी",
+    "text": "कर्मचारी का नाम: राजेश तिवारी। जन्म तिथि: 18/09/1991। पासपोर्ट संख्या: P8765432। आवासीय पता: मकान नंबर 12, सुभाष नगर, देहरादून, उत्तराखंड 248001। संपर्क नंबर: 9412012345।",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "राजेश तिवारी"
+      },
+      {
+        "type": "DATE_OF_BIRTH",
+        "value": "18/09/1991"
+      },
+      {
+        "type": "PASSPORT",
+        "value": "P8765432"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "मकान नंबर 12, सुभाष नगर, देहरादून, उत्तराखंड 248001"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9412012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-HI-006",
+    "language": "Hindi",
+    "category": "Customer Support Ticket",
+    "title": "केवाईसी नवीनीकरण अनुरोध - कविता जैन",
+    "text": "ग्राहक का नाम: कविता जैन। आधार कार्ड संख्या: ९८७६ ५४३२ १०९८। पैन कार्ड: BNZPJ6789K। स्थायी निवास पता: फ्लैट 404, वर्धमान हाइट्स, रोहिणी सेक्टर 9, नई दिल्ली 110085। फोन: ९८१००१२೩೪५।",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "कविता जैन"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "९८७६ ५४३२ १०९८"
+      },
+      {
+        "type": "PAN",
+        "value": "BNZPJ6789K"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "फ्लैट 404, वर्धमान हाइट्स, रोहिणी सेक्टर 9, नई दिल्ली 110085"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "९८१००१२೩೪५"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-HI-007",
+    "language": "Hindi",
+    "category": "Loan Application",
+    "title": "कृषि ऋण आवेदन पत्र - दिनेश यादव",
+    "text": "आवेदक: दिनेश यादव। आधार संख्या: ७६५४ ३२१० ९८७६। पैन नंबर: BKYPD1234L। बैंक ऑफ बड़ौदा बचत खाता संख्या: 192837465012, आईएफएससी कोड: BARB0INDRAU। मोबाइल: 9450012345।",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "दिनेश यादव"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "७६५४ ३२१० ९८७६"
+      },
+      {
+        "type": "PAN",
+        "value": "BKYPD1234L"
+      },
+      {
+        "type": "BANK_ACCOUNT",
+        "value": "192837465012"
+      },
+      {
+        "type": "IFSC_CODE",
+        "value": "BARB0INDRAU"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9450012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-HI-008",
+    "language": "Hindi",
+    "category": "Insurance Claim",
+    "title": "स्वास्थ्य बीमा दावा प्रपत्र - संजय श्रीवास्तव",
+    "text": "बीमाधारक का नाम: संजय श्रीवास्तव। जन्म तिथि: 30/03/1984। पैन कार्ड: CWZPS5678B। पता: मकान संख्या 88, गोमती नगर, लखनऊ, उत्तर प्रदेश 226010। मोबाइल नंबर: 9415012345।",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "संजय श्रीवास्तव"
+      },
+      {
+        "type": "DATE_OF_BIRTH",
+        "value": "30/03/1984"
+      },
+      {
+        "type": "PAN",
+        "value": "CWZPS5678B"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "मकान संख्या 88, गोमती नगर, लखनऊ, उत्तर प्रदेश 226010"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9415012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-HI-009",
+    "language": "Hindi",
+    "category": "Customer Form",
+    "title": "पासपोर्ट सेवा सत्यापन - नेहा मिश्रा",
+    "text": "विदेश मंत्रालय पासपोर्ट सेवा। आवेदक का नाम: नेहा मिश्रा। पासपोर्ट नंबर: K9876543। आधार क्रमांक: ८೭೬೫ ೪३२१ ೦೯೮೭। निवास पता: मकान नंबर 35, राजाजीपुरम, लखनऊ, उत्तर प्रदेश 226017। फोन: 9838012345।",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "नेहा मिश्रा"
+      },
+      {
+        "type": "PASSPORT",
+        "value": "K9876543"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "८೭೬೫ ೪३२१ ೦೯೮೭"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "मकान नंबर 35, राजाजीपुरम, लखनऊ, उत्तर प्रदेश 226017"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9838012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-HI-010",
+    "language": "Hindi",
+    "category": "Employee Record",
+    "title": "वार्षिक कर कटौती प्रपत्र - विकास पांडे",
+    "text": "कर्मचारी नाम: विकास पांडे। जन्म दिन: 11/11/1990। पैन: BKZPV3456F। आधार नंबर: २१०೯ ೮೭೬೫ ೪३२१। पता: मकान न 14, सिविल लाइंस, प्रयागराज, उत्तर प्रदेश 211001। मोबाइल: 9451012345।",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "विकास पांडे"
+      },
+      {
+        "type": "DATE_OF_BIRTH",
+        "value": "11/11/1990"
+      },
+      {
+        "type": "PAN",
+        "value": "BKZPV3456F"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "२१०೯ ೮೭೬೫ ೪३२१"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "मकान न 14, सिविल लाइंस, प्रयागराज, उत्तर प्रदेश 211001"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9451012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-KE-001",
+    "language": "Kannada-English",
+    "category": "Identity Document",
+    "title": "Bilingual Aadhaar Card - ಶ್ರೀ ರಾಹುಲ್ ಶರ್ಮಾ (Rahul Sharma)",
+    "text": "Government of India / ಭಾರತ ಸರ್ಕಾರ. ಹೆಸರು / Name: ರಾಹುಲ್ ಶರ್ಮಾ. DOB / ಜನ್ಮ ದಿನಾಂಕ: 15/08/1990. ಆಧಾರ್ ಸಂಖ್ಯೆ / Aadhaar Number: 4532 8901 2345. ಶಾಶ್ವತ ವಿಳಾಸ / Address: Flat 402, Sai Residency, Indiranagar, Bengaluru, Karnataka 560038. Mobile: +91 98765 43210.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "ರಾಹುಲ್ ಶರ್ಮಾ"
+      },
+      {
+        "type": "DATE_OF_BIRTH",
+        "value": "15/08/1990"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "4532 8901 2345"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "Flat 402, Sai Residency, Indiranagar, Bengaluru, Karnataka 560038"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "+91 98765 43210"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-KE-002",
+    "language": "Kannada-English",
+    "category": "Loan Application",
+    "title": "ಬ್ಯಾಂಕ್ ಸಾಲ ಅರ್ಜಿ / Loan Sanction - Suresh Gowda",
+    "text": "Canara Bank / ಕೆನರಾ ಬ್ಯಾಂಕ್. Applicant / ಅರ್ಜಿದಾರರು: Suresh Gowda. PAN: BZTPG1234N. Bank Account Number: 120098765432, IFSC: CNRB0000123. Email: suresh.gowda@gmail.com. ದೂರವಾಣಿ ಸಂಖ್ಯೆ / Contact: 9845012345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Suresh Gowda"
+      },
+      {
+        "type": "PAN",
+        "value": "BZTPG1234N"
+      },
+      {
+        "type": "BANK_ACCOUNT",
+        "value": "120098765432"
+      },
+      {
+        "type": "IFSC_CODE",
+        "value": "CNRB0000123"
+      },
+      {
+        "type": "EMAIL_ADDRESS",
+        "value": "suresh.gowda@gmail.com"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9845012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-KE-003",
+    "language": "Kannada-English",
+    "category": "Customer Form",
+    "title": "ಮತದಾರರ ಗುರುತಿನ ಚೀಟಿ / EPIC Form - ಪ್ರಿಯಾ ನಾಯರ್",
+    "text": "Election Commission of India / ಭಾರತ ಚುನಾವಣಾ ಆಯೋಗ. Elector Name / ಮತದಾರರ ಹೆಸರು: ಪ್ರಿಯಾ ನಾಯರ್. Voter ID / ಮತದಾರರ ಗುರುತು ಸಂಖ್ಯೆ: WXT9823410. Address / ವಿಳಾಸ: House No 12, Rose Villa, MG Road, Ernakulam, Kochi, Kerala 682016. Phone: 9845098765.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "ಪ್ರಿಯಾ ನಾಯರ್"
+      },
+      {
+        "type": "VOTER_ID",
+        "value": "WXT9823410"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "House No 12, Rose Villa, MG Road, Ernakulam, Kochi, Kerala 682016"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9845098765"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-KE-004",
+    "language": "Kannada-English",
+    "category": "Banking Application",
+    "title": "SB Account KYC - ಪ್ರವೀಣ್ ರಾವ್",
+    "text": "State Bank of India / ಸ್ಟೇಟ್ ಬ್ಯಾಂಕ್ ಆಫ್ ಇಂಡಿಯಾ. Customer Name: ಪ್ರವೀಣ್ ರಾವ್. Aadhaar: 3214 5678 9012. PAN: CWZPR5678Q. Savings Account No: 301928374650, IFSC Code: SBIN0000813. Contact Mobile: 9741012345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "ಪ್ರವೀಣ್ ರಾವ್"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "3214 5678 9012"
+      },
+      {
+        "type": "PAN",
+        "value": "CWZPR5678Q"
+      },
+      {
+        "type": "BANK_ACCOUNT",
+        "value": "301928374650"
+      },
+      {
+        "type": "IFSC_CODE",
+        "value": "SBIN0000813"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9741012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-KE-005",
+    "language": "Kannada-English",
+    "category": "Employee Record",
+    "title": "IT Staff Dossier - Ramesh Bhat",
+    "text": "Karnataka State Electronics Development Corp. Employee: Ramesh Bhat. Date of Birth / ಹುಟ್ಟಿದ ದಿನಾಂಕ: 10/12/1987. Passport No: M1234567. Address: House No 24, Sharada Nilaya, Basavanagudi, Bengaluru, Karnataka 560004. Mobile: 9845123456.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Ramesh Bhat"
+      },
+      {
+        "type": "DATE_OF_BIRTH",
+        "value": "10/12/1987"
+      },
+      {
+        "type": "PASSPORT",
+        "value": "M1234567"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "House No 24, Sharada Nilaya, Basavanagudi, Bengaluru, Karnataka 560004"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9845123456"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-KE-006",
+    "language": "Kannada-English",
+    "category": "Customer Support Ticket",
+    "title": "ಬೆಸ್ಕಾಂ ಸೇವೆ / BESCOM Update - ಮಂಜುಳಾ ಕುಮಾರ್",
+    "text": "Bangalore Electricity Supply Company Limited (BESCOM). Customer / ಗ್ರಾಹಕರು: ಮಂಜುಳಾ ಕುಮಾರ್. Aadhaar: 8901 2345 6789. PAN: AFGPL4567K. ವಿಳಾಸ: Flat 101, Annapurneshwari Nilaya, Rajajinagar, Bengaluru, Karnataka 560010. Contact: 9448012345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "ಮಂಜುಳಾ ಕುಮಾರ್"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "8901 2345 6789"
+      },
+      {
+        "type": "PAN",
+        "value": "AFGPL4567K"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "Flat 101, Annapurneshwari Nilaya, Rajajinagar, Bengaluru, Karnataka 560010"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9448012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-KE-007",
+    "language": "Kannada-English",
+    "category": "Loan Application",
+    "title": "MSME Loan Application - Basavaraj Patil",
+    "text": "Karnataka Gramin Bank / ಕರ್ನಾಟಕ ಗ್ರಾಮೀಣ ಬ್ಯಾಂಕ್. Applicant: Basavaraj Patil. GSTIN: 29AAACK1234A1Z8. Personal PAN: BAZPP8901N. Bank A/C: 201928374651, IFSC: PKGB0001234. Mobile / ಮೊಬೈಲ್: 9449012345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Basavaraj Patil"
+      },
+      {
+        "type": "GSTIN",
+        "value": "29AAACK1234A1Z8"
+      },
+      {
+        "type": "PAN",
+        "value": "BAZPP8901N"
+      },
+      {
+        "type": "BANK_ACCOUNT",
+        "value": "201928374651"
+      },
+      {
+        "type": "IFSC_CODE",
+        "value": "PKGB0001234"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9449012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-KE-008",
+    "language": "Kannada-English",
+    "category": "Insurance Claim",
+    "title": "ಆರೋಗ್ಯ ವಿಮೆ / Health Policy - Geeta Kulkarni",
+    "text": "Star Health Insurance. Policyholder: Geeta Kulkarni. DOB: 08/04/1993. PAN: CWZPK2345D. Residential Address / ವಿಳಾಸ: Flat 201, Gokula Enclave, Yeshwanthpur, Bengaluru, Karnataka 560022. Phone: 9844012345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Geeta Kulkarni"
+      },
+      {
+        "type": "DATE_OF_BIRTH",
+        "value": "08/04/1993"
+      },
+      {
+        "type": "PAN",
+        "value": "CWZPK2345D"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "Flat 201, Gokula Enclave, Yeshwanthpur, Bengaluru, Karnataka 560022"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9844012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-KE-009",
+    "language": "Kannada-English",
+    "category": "Customer Form",
+    "title": "Passport Reissue Form - ವೆಂಕಟೇಶ್ ಪ್ರಸಾದ್",
+    "text": "Regional Passport Office Bengaluru. Traveler / ಅರ್ಜಿದಾರರು: ವೆಂಕಟೇಶ್ ಪ್ರಸಾದ್. Passport Number: M7654321. Aadhaar: 4321 0987 6543. Address / ವಾಸಸ್ಥಳ: House No 50, Vijayanagar 2nd Stage, Bengaluru, Karnataka 560040. Mobile: 9742012345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "ವೆಂಕಟೇಶ್ ಪ್ರಸಾದ್"
+      },
+      {
+        "type": "PASSPORT",
+        "value": "M7654321"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "4321 0987 6543"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "House No 50, Vijayanagar 2nd Stage, Bengaluru, Karnataka 560040"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9742012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-KE-010",
+    "language": "Kannada-English",
+    "category": "Employee Record",
+    "title": "Onboarding Form - ಅನಿಲ್ ಕುಮಾರ್",
+    "text": "Tech Mahindra Bengaluru. Consultant Name / ಹೆಸರು: ಅನಿಲ್ ಕುಮಾರ್. DOB: 22/07/1991. PAN Card: BZKPA5678Q. Aadhaar: 9012 3456 7890. Address: Plot 18, Chamundeshwari Layout, Kengeri, Bengaluru, Karnataka 560060. Contact: 9986012345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "ಅನಿಲ್ ಕುಮಾರ್"
+      },
+      {
+        "type": "DATE_OF_BIRTH",
+        "value": "22/07/1991"
+      },
+      {
+        "type": "PAN",
+        "value": "BZKPA5678Q"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "9012 3456 7890"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "Plot 18, Chamundeshwari Layout, Kengeri, Bengaluru, Karnataka 560060"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9986012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-HE-001",
+    "language": "Hindi-English",
+    "category": "Identity Document",
+    "title": "Bilingual Aadhaar Sheet - अमित कुमार वर्मा (Amit Kumar Verma)",
+    "text": "Government of India / भारत सरकार. Name / नाम: अमित कुमार वर्मा. DOB / जन्म तिथि: 14/06/1986. Aadhaar Number / आधार क्रमांक: 5489 2103 4567. Address / स्थायी पता: House No 24, Tilak Marg, Civil Lines, Lucknow, Uttar Pradesh 226001. Mobile / मोबाइल: 9839012345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "अमित कुमार वर्मा"
+      },
+      {
+        "type": "DATE_OF_BIRTH",
+        "value": "14/06/1986"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "5489 2103 4567"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "House No 24, Tilak Marg, Civil Lines, Lucknow, Uttar Pradesh 226001"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9839012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-HE-002",
+    "language": "Hindi-English",
+    "category": "Loan Application",
+    "title": "ऋण संस्वीकृति पत्र / Loan Approval - Sunita Sharma",
+    "text": "State Bank of India / भारतीय स्टेट बैंक. Applicant / आवेदक: Sunita Sharma. PAN Card: BZTPS9823M. Bank Account: 912837465019, IFSC Code: SBIN0001234. Email: sunita.sharma@yahoo.co.in. Contact / फोन: 9829012345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Sunita Sharma"
+      },
+      {
+        "type": "PAN",
+        "value": "BZTPS9823M"
+      },
+      {
+        "type": "BANK_ACCOUNT",
+        "value": "912837465019"
+      },
+      {
+        "type": "IFSC_CODE",
+        "value": "SBIN0001234"
+      },
+      {
+        "type": "EMAIL_ADDRESS",
+        "value": "sunita.sharma@yahoo.co.in"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9829012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-HE-003",
+    "language": "Hindi-English",
+    "category": "Customer Form",
+    "title": "निर्वाचक नामावली / Voter Register - मनोज कुमार सिंह",
+    "text": "Election Commission of India. Elector Name / निर्वाचक का नाम: मनोज कुमार सिंह. Voter ID: UP/02/015/876543. DOB: 25/12/1989. Address: House No 56, Shastri Nagar, Meerut, Uttar Pradesh 250004. Mobile: 9897012345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "मनोज कुमार सिंह"
+      },
+      {
+        "type": "VOTER_ID",
+        "value": "UP/02/015/876543"
+      },
+      {
+        "type": "DATE_OF_BIRTH",
+        "value": "25/12/1989"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "House No 56, Shastri Nagar, Meerut, Uttar Pradesh 250004"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9897012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-HE-004",
+    "language": "Hindi-English",
+    "category": "Banking Application",
+    "title": "PNB खाता प्रपत्र / Bank Account - Pooja Gupta",
+    "text": "Punjab National Bank / पंजाब नेशनल बैंक. Customer / ग्राहक: Pooja Gupta. Aadhaar No: 3214 5678 9012. PAN: CWZPG4512Q. Savings A/C: 402918273645, IFSC: PUNB0001234. Mobile / मोबाइल: 9711098765.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Pooja Gupta"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "3214 5678 9012"
+      },
+      {
+        "type": "PAN",
+        "value": "CWZPG4512Q"
+      },
+      {
+        "type": "BANK_ACCOUNT",
+        "value": "402918273645"
+      },
+      {
+        "type": "IFSC_CODE",
+        "value": "PUNB0001234"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9711098765"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-HE-005",
+    "language": "Hindi-English",
+    "category": "Employee Record",
+    "title": "कर्मचारी प्रोफ़ाइल / Staff Dossier - राजेश तिवारी",
+    "text": "BHEL. Employee Name / कर्मचारी: राजेश तिवारी. DOB: 18/09/1991. Passport No: P8765432. Residential Address: House No 12, Subhash Nagar, Dehradun, Uttarakhand 248001. Mobile: 9412012345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "राजेश तिवारी"
+      },
+      {
+        "type": "DATE_OF_BIRTH",
+        "value": "18/09/1991"
+      },
+      {
+        "type": "PASSPORT",
+        "value": "P8765432"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "House No 12, Subhash Nagar, Dehradun, Uttarakhand 248001"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9412012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-HE-006",
+    "language": "Hindi-English",
+    "category": "Customer Support Ticket",
+    "title": "ग्राहक सहायता अनुरोध / Support - कविता जैन",
+    "text": "Life Insurance Corporation of India (LIC). Customer: कविता जैन. Aadhaar: 9876 5432 1098. PAN: BNZPJ6789K. Address / पता: Flat 404, Vardhman Heights, Rohini Sector 9, New Delhi 110085. Phone: 9810012345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "कविता जैन"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "9876 5432 1098"
+      },
+      {
+        "type": "PAN",
+        "value": "BNZPJ6789K"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "Flat 404, Vardhman Heights, Rohini Sector 9, New Delhi 110085"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9810012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-HE-007",
+    "language": "Hindi-English",
+    "category": "Loan Application",
+    "title": "कृषि ऋण प्रस्ताव / Kisan Credit - Dinesh Yadav",
+    "text": "Bank of Baroda / बैंक ऑफ बड़ौदा. Applicant / किसान: Dinesh Yadav. Aadhaar Number: 7654 3210 9876. PAN: BKYPD1234L. Savings Account: 192837465012, IFSC: BARB0INDRAU. Contact / मोबाइल: 9450012345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Dinesh Yadav"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "7654 3210 9876"
+      },
+      {
+        "type": "PAN",
+        "value": "BKYPD1234L"
+      },
+      {
+        "type": "BANK_ACCOUNT",
+        "value": "192837465012"
+      },
+      {
+        "type": "IFSC_CODE",
+        "value": "BARB0INDRAU"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9450012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-HE-008",
+    "language": "Hindi-English",
+    "category": "Insurance Claim",
+    "title": "चिकित्सा दावा / Health Claim - संजय श्रीवास्तव",
+    "text": "New India Assurance Company. Policyholder / बीमाधारक: संजय श्रीवास्तव. Date of Birth / जन्म तिथि: 30/03/1984. PAN: CWZPS5678B. Address: House No 88, Gomti Nagar, Lucknow, Uttar Pradesh 226010. Mobile: 9415012345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "संजय श्रीवास्तव"
+      },
+      {
+        "type": "DATE_OF_BIRTH",
+        "value": "30/03/1984"
+      },
+      {
+        "type": "PAN",
+        "value": "CWZPS5678B"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "House No 88, Gomti Nagar, Lucknow, Uttar Pradesh 226010"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9415012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-HE-009",
+    "language": "Hindi-English",
+    "category": "Customer Form",
+    "title": "Passport Verification Desk - नेहा मिश्रा",
+    "text": "Ministry of External Affairs / विदेश मंत्रालय. Applicant / नाम: नेहा मिश्रा. Passport No: K9876543. Aadhaar: 8765 4321 0987. Residential Address: House No 35, Rajajipuram, Lucknow, Uttar Pradesh 226017. Phone: 9838012345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "नेहा मिश्रा"
+      },
+      {
+        "type": "PASSPORT",
+        "value": "K9876543"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "8765 4321 0987"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "House No 35, Rajajipuram, Lucknow, Uttar Pradesh 226017"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9838012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ML-HE-010",
+    "language": "Hindi-English",
+    "category": "Employee Record",
+    "title": "फॉर्म 16 / Tax Dossier - विकास पांडे",
+    "text": "Income Tax Department / आयकर विभाग. Employee / कर्मचारी: विकास पांडे. DOB / जन्म तारीख: 11/11/1990. PAN: BKZPV3456F. Aadhaar: 2109 8765 4321. Permanent Address: House No 14, Civil Lines, Prayagraj, Uttar Pradesh 211001. Mobile: 9451012345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "विकास पांडे"
+      },
+      {
+        "type": "DATE_OF_BIRTH",
+        "value": "11/11/1990"
+      },
+      {
+        "type": "PAN",
+        "value": "BKZPV3456F"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "2109 8765 4321"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "House No 14, Civil Lines, Prayagraj, Uttar Pradesh 211001"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9451012345"
+      }
+    ]
+  }
+]

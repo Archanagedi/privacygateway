@@ -1,0 +1,1482 @@
+[
+  {
+    "id": "DOC-LA-001",
+    "category": "Loan Application",
+    "title": "Home Loan Application - Rahul Sharma",
+    "text": "Applicant Rahul Sharma has applied for a home loan of INR 45,00,000 for purchasing a property in Bengaluru. Aadhaar number: 4532 8901 2345, PAN: ABCDE1234F. Current residential address is Flat 402, Sai Residency, Indiranagar, Bengaluru, Karnataka 560038. Contact number is +91 98765 43210.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Rahul Sharma"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "4532 8901 2345"
+      },
+      {
+        "type": "PAN",
+        "value": "ABCDE1234F"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "Flat 402, Sai Residency, Indiranagar, Bengaluru, Karnataka 560038"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "+91 98765 43210"
+      }
+    ]
+  },
+  {
+    "id": "DOC-LA-002",
+    "category": "Loan Application",
+    "title": "Vehicle Loan Application - Priya Nair",
+    "text": "I am Priya Nair, requesting sanction for a car loan of INR 8,50,000. My PAN card number is BKZPN9821K and Voter ID is WXT9823410. I reside at House No 12, Rose Villa, MG Road, Ernakulam, Kochi, Kerala 682016. Contact phone: 9845012345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Priya Nair"
+      },
+      {
+        "type": "PAN",
+        "value": "BKZPN9821K"
+      },
+      {
+        "type": "VOTER_ID",
+        "value": "WXT9823410"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "House No 12, Rose Villa, MG Road, Ernakulam, Kochi, Kerala 682016"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9845012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-LA-003",
+    "category": "Loan Application",
+    "title": "MSME Working Capital Loan - Amit Patel",
+    "text": "This application is submitted by Amit Patel on behalf of Gujarat Agro Solutions. GSTIN: 24AAACG1234F1Z8. Personal PAN of proprietor is ALMPR3341Q and Aadhaar card is 8721 4455 9012. Factory address is Plot 45, GIDC Industrial Estate, Naroda, Ahmedabad, Gujarat 382330. Phone: +91 91234 56789.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Amit Patel"
+      },
+      {
+        "type": "GSTIN",
+        "value": "24AAACG1234F1Z8"
+      },
+      {
+        "type": "PAN",
+        "value": "ALMPR3341Q"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "8721 4455 9012"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "Plot 45, GIDC Industrial Estate, Naroda, Ahmedabad, Gujarat 382330"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "+91 91234 56789"
+      }
+    ]
+  },
+  {
+    "id": "DOC-LA-004",
+    "category": "Loan Application",
+    "title": "Education Loan - Sneha Kulkarni",
+    "text": "Loan application for Masters abroad by Sneha Kulkarni. Indian Passport Number: M8943210, Aadhaar: 3344 5566 7788, PAN: DRTPS5678L. Permanent address: B-104, Shanti Vihar, Kothrud, Pune, Maharashtra 411038. Mobile: 9822019988.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Sneha Kulkarni"
+      },
+      {
+        "type": "PASSPORT",
+        "value": "M8943210"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "3344 5566 7788"
+      },
+      {
+        "type": "PAN",
+        "value": "DRTPS5678L"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "B-104, Shanti Vihar, Kothrud, Pune, Maharashtra 411038"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9822019988"
+      }
+    ]
+  },
+  {
+    "id": "DOC-LA-005",
+    "category": "Loan Application",
+    "title": "Personal Loan Request - Vikramaditya Singh",
+    "text": "Applicant Name: Vikramaditya Singh. Applied amount: INR 3,00,000. Aadhaar: 6655 4433 2211, PAN: BTYPS9012K, Voter ID: DLX7890123. Communication address: 54, Civil Lines, Near Circuit House, Jaipur, Rajasthan 302006. Contact: +91 94140 12345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Vikramaditya Singh"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "6655 4433 2211"
+      },
+      {
+        "type": "PAN",
+        "value": "BTYPS9012K"
+      },
+      {
+        "type": "VOTER_ID",
+        "value": "DLX7890123"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "54, Civil Lines, Near Circuit House, Jaipur, Rajasthan 302006"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "+91 94140 12345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-LA-006",
+    "category": "Loan Application",
+    "title": "Gold Loan Application - Lakshmi Sundaram",
+    "text": "Pledging 45 grams gold ornaments for urgent personal finance. Customer: Lakshmi Sundaram. PAN: AMYPS4512N, Aadhaar: 9012 3456 7890. Address: 17, North Mada Street, Mylapore, Chennai, Tamil Nadu 600004. Mobile: 9444012345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Lakshmi Sundaram"
+      },
+      {
+        "type": "PAN",
+        "value": "AMYPS4512N"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "9012 3456 7890"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "17, North Mada Street, Mylapore, Chennai, Tamil Nadu 600004"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9444012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-LA-007",
+    "category": "Loan Application",
+    "title": "Business Expansion Loan - Harpreet Singh Dhillon",
+    "text": "Harpreet Singh Dhillon requests INR 25,00,000 credit line. Enterprise GSTIN: 03AABCH1234F1Z2. Individual PAN: CHDPS8899K. Aadhaar: 5566 7788 9900. Address: Plot 12, Focal Point, Industrial Area Phase 2, Ludhiana, Punjab 141010. Tel: +91 98150 54321.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Harpreet Singh Dhillon"
+      },
+      {
+        "type": "GSTIN",
+        "value": "03AABCH1234F1Z2"
+      },
+      {
+        "type": "PAN",
+        "value": "CHDPS8899K"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "5566 7788 9900"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "Plot 12, Focal Point, Industrial Area Phase 2, Ludhiana, Punjab 141010"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "+91 98150 54321"
+      }
+    ]
+  },
+  {
+    "id": "DOC-LA-008",
+    "category": "Loan Application",
+    "title": "Agricultural Equipment Loan - Rameshwar Yadav",
+    "text": "Applicant Rameshwar Yadav seeks tractor loan support. Aadhaar: 2345 6789 0123. Voter ID: UPX4567890. Permanent residence: Village Rampur, Post Barabanki, Lucknow, Uttar Pradesh 225001. Contact: 9450098765.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Rameshwar Yadav"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "2345 6789 0123"
+      },
+      {
+        "type": "VOTER_ID",
+        "value": "UPX4567890"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "Village Rampur, Post Barabanki, Lucknow, Uttar Pradesh 225001"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9450098765"
+      }
+    ]
+  },
+  {
+    "id": "DOC-LA-009",
+    "category": "Loan Application",
+    "title": "Doctor Professional Loan - Ananya Mukherjee",
+    "text": "Dr. Ananya Mukherjee clinic setup loan request of INR 15,00,000. PAN: AQMPM1098R, Aadhaar: 7788 9900 1122. Clinic address: 22/1, Gariahat Road, South Kolkata, West Bengal 700019. Contact number: +91 98300 23456.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Ananya Mukherjee"
+      },
+      {
+        "type": "PAN",
+        "value": "AQMPM1098R"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "7788 9900 1122"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "22/1, Gariahat Road, South Kolkata, West Bengal 700019"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "+91 98300 23456"
+      }
+    ]
+  },
+  {
+    "id": "DOC-LA-010",
+    "category": "Loan Application",
+    "title": "Used Car Loan - Karthik Venkatraman",
+    "text": "Customer Karthik Venkatraman submitted car loan documents. Aadhaar card: 4411 2233 4455, PAN card: BKVPR3456T. Residence: Flat 3B, Krishna Towers, Banjara Hills Road No 10, Hyderabad, Telangana 500034. Mobile: 9949012345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Karthik Venkatraman"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "4411 2233 4455"
+      },
+      {
+        "type": "PAN",
+        "value": "BKVPR3456T"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "Flat 3B, Krishna Towers, Banjara Hills Road No 10, Hyderabad, Telangana 500034"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9949012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-LA-011",
+    "category": "Loan Application",
+    "title": "Microfinance Loan - Sunita Devi",
+    "text": "Self-help group loan applicant Sunita Devi. Aadhaar card: 9182 7364 5511, Voter ID: BRX1298456. Resident of Ward 4, Madhubani Village, Darbhanga, Bihar 846004. Contact: 9199043210.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Sunita Devi"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "9182 7364 5511"
+      },
+      {
+        "type": "VOTER_ID",
+        "value": "BRX1298456"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "Ward 4, Madhubani Village, Darbhanga, Bihar 846004"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9199043210"
+      }
+    ]
+  },
+  {
+    "id": "DOC-LA-012",
+    "category": "Loan Application",
+    "title": "Commercial Real Estate Loan - Alok Chawla",
+    "text": "Applicant Alok Chawla requests financing for commercial showroom. PAN: AGIPC9087M, Aadhaar: 3123 4567 8901. Office Address: 801, Corporate Park, MG Road, Gurugram, Haryana 122002. Contact: +91 98110 99887.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Alok Chawla"
+      },
+      {
+        "type": "PAN",
+        "value": "AGIPC9087M"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "3123 4567 8901"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "801, Corporate Park, MG Road, Gurugram, Haryana 122002"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "+91 98110 99887"
+      }
+    ]
+  },
+  {
+    "id": "DOC-LA-013",
+    "category": "Loan Application",
+    "title": "Solar Rooftop Loan - Deepa Ranganathan",
+    "text": "Consumer Deepa Ranganathan applied under PM Surya Ghar Muft Bijli Yojana. Aadhaar: 7766 5544 3322, PAN: AYCPR7788Q. Installation address: 45, Temple View Colony, Thillai Nagar, Tiruchirappalli, Tamil Nadu 620018. Phone: 9789012345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Deepa Ranganathan"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "7766 5544 3322"
+      },
+      {
+        "type": "PAN",
+        "value": "AYCPR7788Q"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "45, Temple View Colony, Thillai Nagar, Tiruchirappalli, Tamil Nadu 620018"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9789012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-KYC-014",
+    "category": "KYC Document",
+    "title": "Demat Account Opening KYC - Rohan Deshmukh",
+    "text": "New retail investor registration form. Name: Rohan Deshmukh. PAN: BZRPD5432E, Aadhaar number: 6789 1234 5678, Indian Passport: K4567890. Address: 302, Sagar View Apartments, Worli Sea Face, Mumbai, Maharashtra 400030. Mobile: +91 98200 45678.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Rohan Deshmukh"
+      },
+      {
+        "type": "PAN",
+        "value": "BZRPD5432E"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "6789 1234 5678"
+      },
+      {
+        "type": "PASSPORT",
+        "value": "K4567890"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "302, Sagar View Apartments, Worli Sea Face, Mumbai, Maharashtra 400030"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "+91 98200 45678"
+      }
+    ]
+  },
+  {
+    "id": "DOC-KYC-015",
+    "category": "KYC Document",
+    "title": "Savings Bank Account KYC - Meenakshi Sundaram",
+    "text": "Customer Meenakshi Sundaram submitted verification proofs. Aadhaar: 8901 2345 6789, PAN: CKYPS1245G. Current address: 12, Anna Nagar West, Madurai, Tamil Nadu 625020. Contact: 9842011223.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Meenakshi Sundaram"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "8901 2345 6789"
+      },
+      {
+        "type": "PAN",
+        "value": "CKYPS1245G"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "12, Anna Nagar West, Madurai, Tamil Nadu 625020"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9842011223"
+      }
+    ]
+  },
+  {
+    "id": "DOC-KYC-016",
+    "category": "KYC Document",
+    "title": "Corporate KYC - Rajesh Singhania",
+    "text": "Singhania Logistics KYC submission by Managing Director Rajesh Singhania. GSTIN: 27AABCS9988G1Z4. Director PAN: AGYPS7766K, Aadhaar: 3456 7890 1234. Registered corporate office: 1205, Marathon Futurex, Lower Parel, Mumbai, Maharashtra 400013. Phone: +91 98210 33445.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Rajesh Singhania"
+      },
+      {
+        "type": "GSTIN",
+        "value": "27AABCS9988G1Z4"
+      },
+      {
+        "type": "PAN",
+        "value": "AGYPS7766K"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "3456 7890 1234"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "1205, Marathon Futurex, Lower Parel, Mumbai, Maharashtra 400013"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "+91 98210 33445"
+      }
+    ]
+  },
+  {
+    "id": "DOC-KYC-017",
+    "category": "KYC Document",
+    "title": "Mutual Fund CKYC Updation - Tanvi Agarwal",
+    "text": "Investor Tanvi Agarwal requests Central KYC registry record update. PAN: BLZPA8901F, Aadhaar: 1234 9876 5432, Voter ID: UPJ9876543. Address: Flat 501, Golf Links Enclave, Sector 43, Noida, Uttar Pradesh 201301. Contact: 9818099882.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Tanvi Agarwal"
+      },
+      {
+        "type": "PAN",
+        "value": "BLZPA8901F"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "1234 9876 5432"
+      },
+      {
+        "type": "VOTER_ID",
+        "value": "UPJ9876543"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "Flat 501, Golf Links Enclave, Sector 43, Noida, Uttar Pradesh 201301"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9818099882"
+      }
+    ]
+  },
+  {
+    "id": "DOC-KYC-018",
+    "category": "KYC Document",
+    "title": "Crypto Exchange KYC - Arjun Reddy",
+    "text": "User identity verification document for Arjun Reddy. Passport: J9876543, PAN: AKYPR4433H, Aadhaar: 4321 8765 2109. Living at: Penthouse 18, Cyber Towers View, Hitec City, Hyderabad, Telangana 500081. Mobile: +91 99890 12345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Arjun Reddy"
+      },
+      {
+        "type": "PASSPORT",
+        "value": "J9876543"
+      },
+      {
+        "type": "PAN",
+        "value": "AKYPR4433H"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "4321 8765 2109"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "Penthouse 18, Cyber Towers View, Hitec City, Hyderabad, Telangana 500081"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "+91 99890 12345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-KYC-019",
+    "category": "KYC Document",
+    "title": "Prepaid Wallet Full KYC - Kavita Joshi",
+    "text": "Customer Kavita Joshi completed biometric Aadhaar verification. Aadhaar number: 9988 7766 5544, PAN: AUQPJ3322N. Residential address: 45, Shivaji Park Road No 3, Dadar, Mumbai, Maharashtra 400028. Phone: 9869012345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Kavita Joshi"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "9988 7766 5544"
+      },
+      {
+        "type": "PAN",
+        "value": "AUQPJ3322N"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "45, Shivaji Park Road No 3, Dadar, Mumbai, Maharashtra 400028"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9869012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-KYC-020",
+    "category": "KYC Document",
+    "title": "Credit Card Application KYC - Manish Malhotra",
+    "text": "Premium credit card issuance dossier for Manish Malhotra. PAN: BJMPM8877K, Aadhaar: 5544 3322 1100, Passport: P7654321. Residence: Bungalow 8, Vasant Vihar, New Delhi, Delhi 110057. Contact: +91 98100 44556.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Manish Malhotra"
+      },
+      {
+        "type": "PAN",
+        "value": "BJMPM8877K"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "5544 3322 1100"
+      },
+      {
+        "type": "PASSPORT",
+        "value": "P7654321"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "Bungalow 8, Vasant Vihar, New Delhi, Delhi 110057"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "+91 98100 44556"
+      }
+    ]
+  },
+  {
+    "id": "DOC-KYC-021",
+    "category": "KYC Document",
+    "title": "NRI Remittance NRE Account KYC - Suresh Pillai",
+    "text": "Overseas citizen verification for Suresh Pillai. Indian Passport: Z3456789, Overseas Address: Dubai Marina, UAE. Indian correspondence address: TC 15/890, Kowdiar, Thiruvananthapuram, Kerala 695003. PAN: ATTPP6655L. Phone: +91 94470 99887.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Suresh Pillai"
+      },
+      {
+        "type": "PASSPORT",
+        "value": "Z3456789"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "TC 15/890, Kowdiar, Thiruvananthapuram, Kerala 695003"
+      },
+      {
+        "type": "PAN",
+        "value": "ATTPP6655L"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "+91 94470 99887"
+      }
+    ]
+  },
+  {
+    "id": "DOC-KYC-022",
+    "category": "KYC Document",
+    "title": "Pensioner Jeevan Pramaan KYC - Ramachandra Murthy",
+    "text": "Annual life certificate verification for pensioner Ramachandra Murthy. Aadhaar: 6677 8899 0011, PAN: ABIPM3344J, Voter ID: APX6543210. Address: 10-2-14, Gandhi Nagar, Vijayawada, Andhra Pradesh 520003. Mobile: 9848011223.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Ramachandra Murthy"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "6677 8899 0011"
+      },
+      {
+        "type": "PAN",
+        "value": "ABIPM3344J"
+      },
+      {
+        "type": "VOTER_ID",
+        "value": "APX6543210"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "10-2-14, Gandhi Nagar, Vijayawada, Andhra Pradesh 520003"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9848011223"
+      }
+    ]
+  },
+  {
+    "id": "DOC-KYC-023",
+    "category": "KYC Document",
+    "title": "Merchant Onboarding KYC - Sandeep Goyal",
+    "text": "POS swipe machine and QR merchant verification for Sandeep Goyal. Business GSTIN: 06AABCG5544F1Z6, Proprietor PAN: AWYPG2211C, Aadhaar: 1122 3344 5566. Shop 14, Main Market, Ambala Cantt, Haryana 133001. Phone: +91 98960 12345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Sandeep Goyal"
+      },
+      {
+        "type": "GSTIN",
+        "value": "06AABCG5544F1Z6"
+      },
+      {
+        "type": "PAN",
+        "value": "AWYPG2211C"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "1122 3344 5566"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "Shop 14, Main Market, Ambala Cantt, Haryana 133001"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "+91 98960 12345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-KYC-024",
+    "category": "KYC Document",
+    "title": "Online Brokerage Re-KYC - Pooja Bhatia",
+    "text": "Periodic re-KYC declaration. Name: Pooja Bhatia. Aadhaar card: 8877 6655 4433, PAN: BFZPB9900H. Current residence: Flat 204, Silver Oak, Koregaon Park, Pune, Maharashtra 411001. Tel: 9890045678.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Pooja Bhatia"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "8877 6655 4433"
+      },
+      {
+        "type": "PAN",
+        "value": "BFZPB9900H"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "Flat 204, Silver Oak, Koregaon Park, Pune, Maharashtra 411001"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9890045678"
+      }
+    ]
+  },
+  {
+    "id": "DOC-KYC-025",
+    "category": "KYC Document",
+    "title": "Co-operative Bank Member KYC - Balwinder Singh",
+    "text": "Society membership verification for Balwinder Singh. Voter ID: PBX3322110, Aadhaar: 4455 6677 8899. Permanent address: VPO Khadoor Sahib, Tarn Taran, Punjab 143422. Mobile: +91 98720 12345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Balwinder Singh"
+      },
+      {
+        "type": "VOTER_ID",
+        "value": "PBX3322110"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "4455 6677 8899"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "VPO Khadoor Sahib, Tarn Taran, Punjab 143422"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "+91 98720 12345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-KYC-026",
+    "category": "KYC Document",
+    "title": "Foreign Exchange Card KYC - Divya Swaminathan",
+    "text": "Multi-currency travel card issue for Divya Swaminathan. Indian Passport: G5432109, PAN: ALXPS4321D, Aadhaar: 2233 4455 6677. Address: 88, Luz Church Road, Mylapore, Chennai, Tamil Nadu 600004. Phone: 9840056789.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Divya Swaminathan"
+      },
+      {
+        "type": "PASSPORT",
+        "value": "G5432109"
+      },
+      {
+        "type": "PAN",
+        "value": "ALXPS4321D"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "2233 4455 6677"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "88, Luz Church Road, Mylapore, Chennai, Tamil Nadu 600004"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9840056789"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ST-027",
+    "category": "Customer Support Ticket",
+    "title": "Fraudulent Debit Transaction - Deepak Verma",
+    "text": "Customer Deepak Verma reports unauthorized UPI deduction of INR 24,500. Linked Aadhaar: 7890 1234 5678, Account PAN: BIQPV6543K. Residence: Flat 101, Surya Vihar, Aliganj, Lucknow, Uttar Pradesh 226024. Contact mobile: +91 94150 99881.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Deepak Verma"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "7890 1234 5678"
+      },
+      {
+        "type": "PAN",
+        "value": "BIQPV6543K"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "Flat 101, Surya Vihar, Aliganj, Lucknow, Uttar Pradesh 226024"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "+91 94150 99881"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ST-028",
+    "category": "Customer Support Ticket",
+    "title": "Address Change Request - Shweta Kulkarni",
+    "text": "Ticket logged by Shweta Kulkarni. Requesting delivery address update. Previous PAN on file: AYSPK9012F, Aadhaar: 3412 5678 9012. New address: Flat 702, Skyline Towers, Baner Road, Pune, Maharashtra 411045. Phone: 9850012345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Shweta Kulkarni"
+      },
+      {
+        "type": "PAN",
+        "value": "AYSPK9012F"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "3412 5678 9012"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "Flat 702, Skyline Towers, Baner Road, Pune, Maharashtra 411045"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9850012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ST-029",
+    "category": "Customer Support Ticket",
+    "title": "Lost Debit Card Blocking - Gaurav Bhattacharya",
+    "text": "Emergency card block for Gaurav Bhattacharya. Identity verification: Voter ID: WBX1234987, Aadhaar: 9900 1122 3344. Address: 14/C, Lake Gardens, Prince Anwar Shah Road, Kolkata, West Bengal 700045. Registered phone: +91 98310 44556.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Gaurav Bhattacharya"
+      },
+      {
+        "type": "VOTER_ID",
+        "value": "WBX1234987"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "9900 1122 3344"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "14/C, Lake Gardens, Prince Anwar Shah Road, Kolkata, West Bengal 700045"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "+91 98310 44556"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ST-030",
+    "category": "Customer Support Ticket",
+    "title": "Billing Discrepancy & GST Invoice - Naresh Bansal",
+    "text": "Enterprise customer Naresh Bansal raised billing dispute. Company GSTIN: 07AAACB4433E1Z9, PAN: AIOPB8899L. Office address: 405, Nehru Place, New Delhi, Delhi 110019. Contact number: 9810123456.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Naresh Bansal"
+      },
+      {
+        "type": "GSTIN",
+        "value": "07AAACB4433E1Z9"
+      },
+      {
+        "type": "PAN",
+        "value": "AIOPB8899L"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "405, Nehru Place, New Delhi, Delhi 110019"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9810123456"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ST-031",
+    "category": "Customer Support Ticket",
+    "title": "NetBanking Locked Out - Fatima Sheikh",
+    "text": "Customer Fatima Sheikh locked out after 3 failed password attempts. Verified through Passport: K8765432, PAN: ALFPS2233M, Aadhaar: 1100 2299 3388. Address: 24, Mount Road, Sadar, Nagpur, Maharashtra 440001. Mobile: +91 98230 66778.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Fatima Sheikh"
+      },
+      {
+        "type": "PASSPORT",
+        "value": "K8765432"
+      },
+      {
+        "type": "PAN",
+        "value": "ALFPS2233M"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "1100 2299 3388"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "24, Mount Road, Sadar, Nagpur, Maharashtra 440001"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "+91 98230 66778"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ST-032",
+    "category": "Customer Support Ticket",
+    "title": "Cheque Book Dispatch Query - Hemant Chougule",
+    "text": "Cheque book undelivered for Hemant Chougule. Aadhaar card: 6543 2109 8765, PAN: BRTPC7766N. Communication address: Plot 9, Tarabai Park, Kolhapur, Maharashtra 416003. Contact: 9822456789.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Hemant Chougule"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "6543 2109 8765"
+      },
+      {
+        "type": "PAN",
+        "value": "BRTPC7766N"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "Plot 9, Tarabai Park, Kolhapur, Maharashtra 416003"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9822456789"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ST-033",
+    "category": "Customer Support Ticket",
+    "title": "SIM Swap Alert Escalation - Arvind Swamy",
+    "text": "Urgent security incident for user Arvind Swamy. Suspected SIM duplicate swap. Verified Aadhaar: 8811 2233 4455, Voter ID: TNX8765432. Address: 19, TTK Road, Alwarpet, Chennai, Tamil Nadu 600018. Alternate contact: +91 98410 77889.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Arvind Swamy"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "8811 2233 4455"
+      },
+      {
+        "type": "VOTER_ID",
+        "value": "TNX8765432"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "19, TTK Road, Alwarpet, Chennai, Tamil Nadu 600018"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "+91 98410 77889"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ST-034",
+    "category": "Customer Support Ticket",
+    "title": "Mobile Number Change Dispute - Ritu Saxena",
+    "text": "Customer Ritu Saxena filed ticket regarding unauthorized phone number modification on credit account. PAN: BZTPS1122G, Aadhaar: 5566 4433 2211. Address: 104, Malviya Nagar, Jaipur, Rajasthan 302017. Phone: 9414099881.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Ritu Saxena"
+      },
+      {
+        "type": "PAN",
+        "value": "BZTPS1122G"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "5566 4433 2211"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "104, Malviya Nagar, Jaipur, Rajasthan 302017"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9414099881"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ST-035",
+    "category": "Customer Support Ticket",
+    "title": "Loan Foreclosure Statement Delay - Ashwin Padmanabhan",
+    "text": "Complainant Ashwin Padmanabhan requested foreclosure letter. Aadhaar: 4321 0987 6543, PAN: ACYPP9087H. Property address: Flat 12A, Brigade Gateway, Malleshwaram, Bengaluru, Karnataka 560055. Mobile: +91 98450 67890.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Ashwin Padmanabhan"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "4321 0987 6543"
+      },
+      {
+        "type": "PAN",
+        "value": "ACYPP9087H"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "Flat 12A, Brigade Gateway, Malleshwaram, Bengaluru, Karnataka 560055"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "+91 98450 67890"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ST-036",
+    "category": "Customer Support Ticket",
+    "title": "Tax Deducted at Source (TDS) Certificate - Ashok Singhal",
+    "text": "Customer Ashok Singhal requests Form 16A correction. PAN: AAAPS9911D, Aadhaar: 8901 1234 4567. Address: House 55, Sector 14, Panchkula, Haryana 134113. Tel: 9888012345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Ashok Singhal"
+      },
+      {
+        "type": "PAN",
+        "value": "AAAPS9911D"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "8901 1234 4567"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "House 55, Sector 14, Panchkula, Haryana 134113"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9888012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ST-037",
+    "category": "Customer Support Ticket",
+    "title": "International Roaming Activation - Meghna Sen",
+    "text": "Traveller Meghna Sen requests international pack. Passport: T6543210, PAN: AQMPS4455J, Aadhaar: 3322 1100 9988. Residence: 58, Ballygunge Circular Road, Kolkata, West Bengal 700019. Mobile: +91 98300 88776.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Meghna Sen"
+      },
+      {
+        "type": "PASSPORT",
+        "value": "T6543210"
+      },
+      {
+        "type": "PAN",
+        "value": "AQMPS4455J"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "3322 1100 9988"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "58, Ballygunge Circular Road, Kolkata, West Bengal 700019"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "+91 98300 88776"
+      }
+    ]
+  },
+  {
+    "id": "DOC-ST-038",
+    "category": "Customer Support Ticket",
+    "title": "Chargeback for Double Swiped Point-of-Sale - Vinay Hegde",
+    "text": "Dispute filed by Vinay Hegde for merchant double charge. Aadhaar: 7788 1122 3344, PAN: AKYPH5566R. Address: 15, Kadri Temple Road, Mangaluru, Karnataka 575002. Contact: 9845022334.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Vinay Hegde"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "7788 1122 3344"
+      },
+      {
+        "type": "PAN",
+        "value": "AKYPH5566R"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "15, Kadri Temple Road, Mangaluru, Karnataka 575002"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9845022334"
+      }
+    ]
+  },
+  {
+    "id": "DOC-IC-039",
+    "category": "Insurance Claim",
+    "title": "Health Insurance Cashless Hospitalization - Sunil Kulkarni",
+    "text": "Cashless claim pre-authorization for Sunil Kulkarni admitted at Manipal Hospital. Aadhaar: 9988 1122 3344, PAN: AKYPK8877M. Patient residence: Flat 204, Green Glen Layout, Bellandur, Bengaluru, Karnataka 560103. Attendant phone: +91 98800 12345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Sunil Kulkarni"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "9988 1122 3344"
+      },
+      {
+        "type": "PAN",
+        "value": "AKYPK8877M"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "Flat 204, Green Glen Layout, Bellandur, Bengaluru, Karnataka 560103"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "+91 98800 12345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-IC-040",
+    "category": "Insurance Claim",
+    "title": "Motor Vehicle Accident Claim - Varun Kapoor",
+    "text": "Accident claim for car damaged near Western Express Highway. Policyholder: Varun Kapoor. Driving License linked Aadhaar: 5544 6677 8899, PAN: AYVPK3344N. Residential address: 601, Sea Breeze, Bandra West, Mumbai, Maharashtra 400050. Mobile: 9820011223.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Varun Kapoor"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "5544 6677 8899"
+      },
+      {
+        "type": "PAN",
+        "value": "AYVPK3344N"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "601, Sea Breeze, Bandra West, Mumbai, Maharashtra 400050"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9820011223"
+      }
+    ]
+  },
+  {
+    "id": "DOC-IC-041",
+    "category": "Insurance Claim",
+    "title": "Term Life Death Benefit Claim - Nominee Geeta Somani",
+    "text": "Nominee Geeta Somani submitted claim form for deceased life assured Ramesh Somani. Nominee Aadhaar: 1234 5678 9012, PAN: BZGPS7788Q, Voter ID: RJX9988776. Residence: 42, Civil Lines, Kota, Rajasthan 324001. Contact: +91 94140 33445.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Geeta Somani"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "1234 5678 9012"
+      },
+      {
+        "type": "PAN",
+        "value": "BZGPS7788Q"
+      },
+      {
+        "type": "VOTER_ID",
+        "value": "RJX9988776"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "42, Civil Lines, Kota, Rajasthan 324001"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "+91 94140 33445"
+      }
+    ]
+  },
+  {
+    "id": "DOC-IC-042",
+    "category": "Insurance Claim",
+    "title": "Overseas Travel Medical Emergency - Siddharth Verma",
+    "text": "Emergency hospital claim filed by Siddharth Verma while visiting Frankfurt. Indian Passport: L9876543, PAN: AMYPV1234L, Aadhaar: 8877 9900 1122. Indian address: D-45, Hauz Khas Enclave, New Delhi, Delhi 110016. Contact: +91 98110 55667.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Siddharth Verma"
+      },
+      {
+        "type": "PASSPORT",
+        "value": "L9876543"
+      },
+      {
+        "type": "PAN",
+        "value": "AMYPV1234L"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "8877 9900 1122"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "D-45, Hauz Khas Enclave, New Delhi, Delhi 110016"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "+91 98110 55667"
+      }
+    ]
+  },
+  {
+    "id": "DOC-IC-043",
+    "category": "Insurance Claim",
+    "title": "Commercial Fire & Peril Insurance - Bharat Traders",
+    "text": "Factory warehouse fire claim for Bharat Traders. Enterprise GSTIN: 23AABCB1122C1Z4. Managing Partner: Bharat Jain, PAN: AKYPJ9087S, Aadhaar: 6655 1122 4433. Warehouse location: Plot 78, Sanwer Road Industrial Area, Indore, Madhya Pradesh 452015. Tel: 9826012345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Bharat Jain"
+      },
+      {
+        "type": "GSTIN",
+        "value": "23AABCB1122C1Z4"
+      },
+      {
+        "type": "PAN",
+        "value": "AKYPJ9087S"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "6655 1122 4433"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "Plot 78, Sanwer Road Industrial Area, Indore, Madhya Pradesh 452015"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9826012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-IC-044",
+    "category": "Insurance Claim",
+    "title": "Crop Insurance (PMFBY) Claim - Sukhdev Mann",
+    "text": "Hailstorm loss compensation for farmer Sukhdev Mann. Aadhaar number: 3344 1122 5566, Voter ID: HRX4455667. Farmland and residence: Village Shahpur, Tehsil Thanesar, Kurukshetra, Haryana 136118. Phone: +91 94160 12345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Sukhdev Mann"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "3344 1122 5566"
+      },
+      {
+        "type": "VOTER_ID",
+        "value": "HRX4455667"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "Village Shahpur, Tehsil Thanesar, Kurukshetra, Haryana 136118"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "+91 94160 12345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-IC-045",
+    "category": "Insurance Claim",
+    "title": "Baggage Loss Claim - Sangeeta Menon",
+    "text": "Airlines baggage transit loss claim for Sangeeta Menon. Indian Passport: V8765432, Aadhaar: 9911 2233 4455, PAN: BRTPM4433K. Residential address: 5/142, Panampilly Nagar, Ernakulam, Kochi, Kerala 682036. Mobile: 9847012345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Sangeeta Menon"
+      },
+      {
+        "type": "PASSPORT",
+        "value": "V8765432"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "9911 2233 4455"
+      },
+      {
+        "type": "PAN",
+        "value": "BRTPM4433K"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "5/142, Panampilly Nagar, Ernakulam, Kochi, Kerala 682036"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9847012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-IC-046",
+    "category": "Insurance Claim",
+    "title": "Critical Illness Benefit - Rajeshwari Subramanian",
+    "text": "Cancer diagnosis benefit request by Rajeshwari Subramanian. PAN: AQMPS9988T, Aadhaar: 4433 2211 0099. Address: Flat 4A, Kaveri Apartments, Besant Nagar, Chennai, Tamil Nadu 600090. Contact: +91 94450 99881.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Rajeshwari Subramanian"
+      },
+      {
+        "type": "PAN",
+        "value": "AQMPS9988T"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "4433 2211 0099"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "Flat 4A, Kaveri Apartments, Besant Nagar, Chennai, Tamil Nadu 600090"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "+91 94450 99881"
+      }
+    ]
+  },
+  {
+    "id": "DOC-IC-047",
+    "category": "Insurance Claim",
+    "title": "Home Structure Cyclone Damage Claim - Debabrata Das",
+    "text": "Cyclone Dana roof damage claim by Debabrata Das. Aadhaar: 7788 4455 1122, Voter ID: ORX9988112. Property address: Plot 34, Saheed Nagar, Bhubaneswar, Odisha 751007. Phone: 9437012345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Debabrata Das"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "7788 4455 1122"
+      },
+      {
+        "type": "VOTER_ID",
+        "value": "ORX9988112"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "Plot 34, Saheed Nagar, Bhubaneswar, Odisha 751007"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9437012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-IC-048",
+    "category": "Insurance Claim",
+    "title": "Two Wheeler Theft Insurance - Pankaj Mishra",
+    "text": "FIR lodged motorcycle theft claim by Pankaj Mishra. Aadhaar: 1122 9988 7766, PAN: BIQPM4455R. Residence: House 12, Kanker Khera, Meerut Cantt, Meerut, Uttar Pradesh 250001. Mobile: +91 94120 77889.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Pankaj Mishra"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "1122 9988 7766"
+      },
+      {
+        "type": "PAN",
+        "value": "BIQPM4455R"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "House 12, Kanker Khera, Meerut Cantt, Meerut, Uttar Pradesh 250001"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "+91 94120 77889"
+      }
+    ]
+  },
+  {
+    "id": "DOC-IC-049",
+    "category": "Insurance Claim",
+    "title": "Marine Transit Cargo Damage - Zenith Textiles",
+    "text": "Consignment water damage claim filed by Zenith Textiles. GSTIN: 24AAACZ9900H1Z3. Managing Director: Bhupendra Vora, PAN: AKYPV3322E, Aadhaar: 8899 0011 2233. Office: 201, Textile Market, Ring Road, Surat, Gujarat 395002. Tel: 9825012345.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Bhupendra Vora"
+      },
+      {
+        "type": "GSTIN",
+        "value": "24AAACZ9900H1Z3"
+      },
+      {
+        "type": "PAN",
+        "value": "AKYPV3322E"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "8899 0011 2233"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "201, Textile Market, Ring Road, Surat, Gujarat 395002"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "9825012345"
+      }
+    ]
+  },
+  {
+    "id": "DOC-IC-050",
+    "category": "Insurance Claim",
+    "title": "Individual Personal Accident Disability - Nitesh Tiwari",
+    "text": "Permanent partial disability claim for Nitesh Tiwari following road incident. Aadhaar: 5544 1122 3344, PAN: AKYPT6677F, Voter ID: MPX5544332. Residential address: 22, Arera Colony, Bhopal, Madhya Pradesh 462016. Contact: +91 98270 44556.",
+    "expected_entities": [
+      {
+        "type": "PERSON",
+        "value": "Nitesh Tiwari"
+      },
+      {
+        "type": "AADHAAR",
+        "value": "5544 1122 3344"
+      },
+      {
+        "type": "PAN",
+        "value": "AKYPT6677F"
+      },
+      {
+        "type": "VOTER_ID",
+        "value": "MPX5544332"
+      },
+      {
+        "type": "ADDRESS",
+        "value": "22, Arera Colony, Bhopal, Madhya Pradesh 462016"
+      },
+      {
+        "type": "PHONE_NUMBER",
+        "value": "+91 98270 44556"
+      }
+    ]
+  }
+]

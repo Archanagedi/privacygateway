@@ -1,0 +1,47 @@
+# Python & Environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Secrets and Environment Variables
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Presidio & Spacy cache
+.cache/
+models/
+
+# Logs & Databases
+*.log
+local_audit_db.json
+local_metrics.json
+.system_generated/
+
+# OS specific
+.DS_Store
+Thumbs.db
+desktop.ini
